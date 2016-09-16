@@ -1,0 +1,29 @@
+/**
+ * Index.css
+ */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  background-color: #f7f7f7;
+}
+
+.custom-infinite-list {
+  width: 450px;
+  margin: 150px auto 0;
+  list-style: none;
+  padding: 0;
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+}
+
+.custom-infinite-list__item {
+  display: flex;
+  padding: 15px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #e6e6e6;
+}
