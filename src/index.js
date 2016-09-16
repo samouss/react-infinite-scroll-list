@@ -19,7 +19,7 @@ export default function InfiniteList(props) {
   return (
     <ul
       className={className}
-      style={{ height: containerHeight, 'overflow-y': 'scroll' }}
+      style={{ height: containerHeight, overflowY: 'scroll' }}
       onScroll={onScroll(isLoading, isEndReach, threshold, onThresholdReach)}
     >
       {children}

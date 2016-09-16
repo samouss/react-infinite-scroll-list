@@ -13,7 +13,7 @@ describe('<InfiniteList />', () => {
     const expectation = (
       <ul
         className="infinite-list"
-        style={{ height: '750px', 'overflow-y': 'scroll' }}
+        style={{ height: '750px', overflowY: 'scroll' }}
       >
         <li>Child 1</li>
         <li>Child 2</li>
@@ -43,7 +43,7 @@ describe('<InfiniteList />', () => {
     const expectation = (
       <ul
         className="custom-infinite-list"
-        style={{ height: '750px', 'overflow-y': 'scroll' }}
+        style={{ height: '750px', overflowY: 'scroll' }}
       >
         <li>Child 1</li>
         <li>Child 2</li>
