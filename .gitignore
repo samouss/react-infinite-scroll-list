@@ -3,3 +3,5 @@
 /dist
 
 # Files
+npm-debug.log
+.DS_Store
