@@ -12,14 +12,10 @@ export default class Container extends Component {
       items: [],
     };
 
-    this.onThresholdReach = this.onThresholdReach.bind(this);
+    this.createElement = this.createElement.bind(this);
   }
 
   componentDidMount() {
-    this.createElement();
-  }
-
-  onThresholdReach() {
     this.createElement();
   }
 
@@ -55,7 +51,7 @@ export default class Container extends Component {
           containerHeight="648px"
           isLoading={isLoading}
           isEndReach={isEndReach}
-          onThresholdReach={this.onThresholdReach}
+          onThresholdReach={this.createElement}
           threshold={150}
         >
         {items.map(item => (
