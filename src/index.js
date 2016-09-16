@@ -45,8 +45,8 @@ function onScroll(isLoading, isEndReach, threshold, callback) {
 
     const { target } = event;
 
-    const scrollPosition = target.clientHeight + target.scrollTop;
-    const scrollThreshold = Math.ceil(target.scrollHeight - threshold);
+    const scrollPosition = Math.ceil(target.clientHeight + target.scrollTop);
+    const scrollThreshold = target.scrollHeight - threshold;
 
     if (scrollPosition >= scrollThreshold) {
       callback(event);
