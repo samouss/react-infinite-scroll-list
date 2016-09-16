@@ -10,9 +10,14 @@ body {
   background-color: #f7f7f7;
 }
 
+.title-infinite-list {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
 .custom-infinite-list {
   width: 450px;
-  margin: 150px auto 0;
+  margin: 30px auto;
   list-style: none;
   padding: 0;
   background-color: #ffffff;
