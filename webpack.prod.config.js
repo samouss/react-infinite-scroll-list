@@ -1,8 +1,4 @@
-// @TODO: add plugin for minification etc...
-
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 if (process.env.NODE_ENV !== 'production') {
   throw new Error('Only call production file when ENV is "production"');
@@ -12,9 +8,18 @@ module.exports = {
   devtool: 'source-map',
   entry: './src/index.js',
   output: {
+    filename: 'react-infinte-list.js',
     path: './dist',
-    publicPath: '/',
-    filename: '[name].js',
+    library: 'react-infinte-list',
+    libraryTarget: 'umd',
+  },
+  externals: {
+    react: {
+      root: 'React',
+      commonjs2: 'react',
+      commonjs: 'react',
+      amd: 'react',
+    },
   },
   eslint: {
     configFile: './.eslintrc',
@@ -35,22 +40,9 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel',
       },
-      {
-        test: /\.html$/,
-        loader: 'html',
-      },
-      {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap'),
-      },
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      inject: true,
-      template: 'src/index.html',
-    }),
-    new ExtractTextPlugin('[name].css'),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         screw_ie8: true,
