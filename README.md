@@ -1,53 +1,64 @@
-# React Webpack starter [![dependencies Status](https://david-dm.org/samouss/react-webpack-starter/status.svg)](https://david-dm.org/samouss/react-webpack-starter) [![devDependencies Status](https://david-dm.org/samouss/react-webpack-starter/dev-status.svg)](https://david-dm.org/samouss/react-webpack-starter?type=dev)
-
-React starter build with Webpack React Starter with Babel, ESLint, Mocha, Chai, Sinon, Enzyme.
-
-## Clone
-
-Run this command for launch a new project from the starter.
-
-```
-// Run this command first for clone the repository
-git clone git@github.com:samouss/react-webpack-starter.git [PROJECT_NAME]
-
-// Then execute this one for remove .git information and start a new project
-rm -rf !$/.git
-```
+# React Infinite List
 
 ## Installation
 
-Clone the repository and then run the following command:
+```
+npm install --save react-infinite-list
+```
+
+## Usage
+
+Import the module in your application:
+
+```js
+// From ES6
+import InfiniteList from 'react-infinite-list'
+
+// From CJS
+var InfiniteList = require('react-infinite-list');
+
+From global
+var InfiniteList = ReactInfiniteList.default;
+```
+
+Then use it juste like that:
+
+```js
+<InfiniteList
+  className="custom-class-name"
+  containerHeight="648px"
+  isLoading={true|false}
+  isEndReach={true|false}
+  onThresholdReach={() => { console.log('Load more content') }}
+  threshold={150}
+>
+  {items.map(item => (
+    <div
+      className="custom-infinite-list__item"
+      key={item.id}
+    >
+      Item in the list
+    </div>
+  ))}
+</InfiniteList>
+```
+
+## Run the example
+
+Clone the repository then run:
 
 ```
 npm install
 ```
 
-## Run the application
-
-For build the dev application and launch a server in watch mode on `localhost:8080`:
+and then:
 
 ```
 npm start
 ```
 
-## Bundle the application
-
-For build your application for production:
-
-```
-npm run build
-```
-
-## Run the test for your application
-
-Your tests will be executed in single run mode:
+## Run the test
 
 ```
 npm test
-```
-
-For run in watch mode:
-
-```
-npm test:watch
 ```
