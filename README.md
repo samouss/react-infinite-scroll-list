@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-npm install --save react-infinite-list
+npm install --save react-infinite-scroll-list
 ```
 
 ## Usage

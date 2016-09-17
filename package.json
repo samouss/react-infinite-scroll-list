@@ -1,5 +1,5 @@
 {
-  "name": "react-infinite-list",
+  "name": "react-infinite-scroll-list",
   "version": "1.0.0",
   "description": "React component for create an inifinte list",
   "main": "lib/index.js",
@@ -14,6 +14,11 @@
     "test": "mocha --require test-setup.js --compilers js:babel-register ./src/**/*.spec.js",
     "test:watch": "npm test -- --watch"
   },
+  "files": [
+    "dist",
+    "lib",
+    "src"
+  ],
   "keywords": [
     "infinite",
     "scroll",
