@@ -8,7 +8,7 @@ module.exports = {
   devtool: 'source-map',
   entry: './src/index.js',
   output: {
-    filename: 'react-infinte-list.js',
+    filename: 'react-infinite-list.js',
     path: './dist',
     library: 'ReactInfiniteList',
     libraryTarget: 'umd',
