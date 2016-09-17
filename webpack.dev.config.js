@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'eval',
-  entry: './src/index.js',
+  entry: './example/index.js',
   output: {
     path: './dist',
     publicPath: '/',
@@ -38,7 +38,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
-      template: 'src/index.html',
+      template: './example/index.html',
     }),
   ],
 };
