@@ -1,6 +1,7 @@
 # Folder
 /node_modules
 /dist
+/lib
 
 # Files
 npm-debug.log
