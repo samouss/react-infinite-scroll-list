@@ -12,10 +12,10 @@ Import the module in your application:
 
 ```js
 // From ES6
-import InfiniteList from 'react-infinite-list'
+import InfiniteList from 'react-infinite-list-scroll'
 
 // From CJS
-var InfiniteList = require('react-infinite-list');
+var InfiniteList = require('react-infinite-list-scroll');
 
 From global
 var InfiniteList = ReactInfiniteList.default;
