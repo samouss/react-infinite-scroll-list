@@ -1,15 +1,34 @@
 const webpack = require('webpack');
 
-if (process.env.NODE_ENV !== 'production') {
-  throw new Error('Only call production file when ENV is "production"');
+const plugins = [
+  new webpack.optimize.OccurrenceOrderPlugin(),
+  new webpack.DefinePlugin({
+    'process.env': {
+      NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+    },
+  }),
+];
+
+if (process.env.NODE_ENV === 'production') {
+  plugins.push(
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        screw_ie8: true,
+        warnings: false,
+      },
+      mangle: {
+        screw_ie8: true,
+      },
+      output: {
+        comments: false,
+        screw_ie8: true,
+      },
+    })
+  );
 }
 
 module.exports = {
-  devtool: 'source-map',
-  entry: './src/index.js',
   output: {
-    filename: 'react-infinite-list.js',
-    path: './dist',
     library: 'ReactInfiniteList',
     libraryTarget: 'umd',
   },
@@ -42,24 +61,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        screw_ie8: true,
-        warnings: false,
-      },
-      mangle: {
-        screw_ie8: true,
-      },
-      output: {
-        comments: false,
-        screw_ie8: true,
-      },
-    }),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production'),
-      },
-    }),
-  ],
+  plugins,
 };
