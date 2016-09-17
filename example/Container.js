@@ -54,14 +54,14 @@ export default class Container extends Component {
           onThresholdReach={this.createElement}
           threshold={150}
         >
-        {items.map(item => (
-          <div
-            className="custom-infinite-list__item"
-            key={item.id}
-          >
-            {item.message}
-          </div>
-        ))}
+          {items.map(item => (
+            <div
+              className="custom-infinite-list__item"
+              key={item.id}
+            >
+              {item.message}
+            </div>
+          ))}
         </InfiniteList>
       </div>
     );
