@@ -11,14 +11,14 @@ describe('<InfiniteList />', () => {
     const onThresholdReach = () => {};
 
     const expectation = (
-      <ul
+      <div
         className="infinite-list"
         style={{ height: '750px', overflowY: 'scroll' }}
       >
-        <li>Child 1</li>
-        <li>Child 2</li>
-        <li>Child 3</li>
-      </ul>
+        <div>Child 1</div>
+        <div>Child 2</div>
+        <div>Child 3</div>
+      </div>
     );
 
     const wrapper = shallow(
@@ -28,9 +28,9 @@ describe('<InfiniteList />', () => {
         isEndReach={false}
         onThresholdReach={onThresholdReach}
       >
-        <li>Child 1</li>
-        <li>Child 2</li>
-        <li>Child 3</li>
+        <div>Child 1</div>
+        <div>Child 2</div>
+        <div>Child 3</div>
       </InfiniteList>
     );
 
@@ -41,14 +41,14 @@ describe('<InfiniteList />', () => {
     const onThresholdReach = () => {};
 
     const expectation = (
-      <ul
+      <div
         className="custom-infinite-list"
         style={{ height: '750px', overflowY: 'scroll' }}
       >
-        <li>Child 1</li>
-        <li>Child 2</li>
-        <li>Child 3</li>
-      </ul>
+        <div>Child 1</div>
+        <div>Child 2</div>
+        <div>Child 3</div>
+      </div>
     );
 
     const wrapper = shallow(
@@ -59,9 +59,9 @@ describe('<InfiniteList />', () => {
         isEndReach={false}
         onThresholdReach={onThresholdReach}
       >
-        <li>Child 1</li>
-        <li>Child 2</li>
-        <li>Child 3</li>
+        <div>Child 1</div>
+        <div>Child 2</div>
+        <div>Child 3</div>
       </InfiniteList>
     );
 
@@ -78,14 +78,14 @@ describe('<InfiniteList />', () => {
         isEndReach={false}
         onThresholdReach={onThresholdReach}
       >
-        <li>Child 1</li>
-        <li>Child 2</li>
-        <li>Child 3</li>
+        <div>Child 1</div>
+        <div>Child 2</div>
+        <div>Child 3</div>
       </InfiniteList>
     );
 
     wrapper
-      .find('ul')
+      .find('.infinite-list')
       .simulate('scroll', {
         target: {
           clientHeight: 750,
@@ -108,14 +108,14 @@ describe('<InfiniteList />', () => {
         onThresholdReach={onThresholdReach}
         threshold={100}
       >
-        <li>Child 1</li>
-        <li>Child 2</li>
-        <li>Child 3</li>
+        <div>Child 1</div>
+        <div>Child 2</div>
+        <div>Child 3</div>
       </InfiniteList>
     );
 
     wrapper
-      .find('ul')
+      .find('.infinite-list')
       .simulate('scroll', {
         target: {
           clientHeight: 750,
@@ -137,14 +137,14 @@ describe('<InfiniteList />', () => {
         isEndReach={false}
         onThresholdReach={onThresholdReach}
       >
-        <li>Child 1</li>
-        <li>Child 2</li>
-        <li>Child 3</li>
+        <div>Child 1</div>
+        <div>Child 2</div>
+        <div>Child 3</div>
       </InfiniteList>
     );
 
     wrapper
-      .find('ul')
+      .find('.infinite-list')
       .simulate('scroll', {
         target: {
           clientHeight: 750,
@@ -167,14 +167,14 @@ describe('<InfiniteList />', () => {
         onThresholdReach={onThresholdReach}
         threshold={100}
       >
-        <li>Child 1</li>
-        <li>Child 2</li>
-        <li>Child 3</li>
+        <div>Child 1</div>
+        <div>Child 2</div>
+        <div>Child 3</div>
       </InfiniteList>
     );
 
     wrapper
-      .find('ul')
+      .find('.infinite-list')
       .simulate('scroll', {
         target: {
           clientHeight: 750,
@@ -196,14 +196,14 @@ describe('<InfiniteList />', () => {
         isEndReach={false}
         onThresholdReach={onThresholdReach}
       >
-        <li>Child 1</li>
-        <li>Child 2</li>
-        <li>Child 3</li>
+        <div>Child 1</div>
+        <div>Child 2</div>
+        <div>Child 3</div>
       </InfiniteList>
     );
 
     wrapper
-      .find('ul')
+      .find('.infinite-list')
       .simulate('scroll', {
         target: {
           clientHeight: 750,
@@ -225,14 +225,14 @@ describe('<InfiniteList />', () => {
         isEndReach
         onThresholdReach={onThresholdReach}
       >
-        <li>Child 1</li>
-        <li>Child 2</li>
-        <li>Child 3</li>
+        <div>Child 1</div>
+        <div>Child 2</div>
+        <div>Child 3</div>
       </InfiniteList>
     );
 
     wrapper
-      .find('ul')
+      .find('.infinite-list')
       .simulate('scroll', {
         target: {
           clientHeight: 750,

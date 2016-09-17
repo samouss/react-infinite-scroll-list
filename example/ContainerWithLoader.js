@@ -65,12 +65,12 @@ export default class ContainerWithLoader extends Component {
           threshold={150}
         >
         {items.map(item => (
-          <li
+          <div
             className="custom-infinite-list__item"
             key={item.id}
           >
             {item.message}
-          </li>
+          </div>
         ))}
         {this.renderFooter()}
         </InfiniteList>
