@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Webpack React Starter with Babel, ESLint, Mocha, Chai, Sinon, Enzyme",
   "scripts": {
-    "start": "webpack-dev-server --inline --hot --content-base dist --no-info",
+    "start": "webpack-dev-server --inline --hot --content-base dist --no-info --open",
     "build": "rm -rf ./dist && NODE_ENV=production webpack --progress",
     "test": "mocha --require test-setup.js --compilers js:babel-register ./src/**/*.spec.js",
     "test:watch": "npm test -- --watch"
