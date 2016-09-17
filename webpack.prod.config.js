@@ -10,7 +10,7 @@ module.exports = {
   output: {
     filename: 'react-infinte-list.js',
     path: './dist',
-    library: 'react-infinte-list',
+    library: 'ReactInfiniteList',
     libraryTarget: 'umd',
   },
   externals: {
