@@ -1,4 +1,6 @@
-# React Infinite List [![Build Status](https://travis-ci.org/samouss/react-infinite-list.svg?branch=master)](https://travis-ci.org/samouss/react-infinite-list)
+# React Infinite List
+
+[![Build Status](https://travis-ci.org/samouss/react-infinite-list.svg?branch=master)](https://travis-ci.org/samouss/react-infinite-list)
 
 ## Installation
 
