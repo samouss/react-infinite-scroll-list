@@ -19,7 +19,7 @@ import InfiniteList from 'react-infinite-list-scroll'
 // From CJS
 var InfiniteList = require('react-infinite-list-scroll');
 
-From global
+// From global
 var InfiniteList = ReactInfiniteList.default;
 ```
 
