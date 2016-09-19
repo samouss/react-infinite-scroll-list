@@ -68,6 +68,41 @@ describe('<InfiniteList />', () => {
     wrapper.containsMatchingElement(expectation).should.be.equal(true);
   });
 
+  it('should trigger onThresholdReach callback on scroll with event as parameter', () => {
+    const onThresholdReach = sinon.spy();
+
+    const wrapper = shallow(
+      <InfiniteList
+        containerHeight="750px"
+        isLoading={false}
+        isEndReach={false}
+        onThresholdReach={onThresholdReach}
+      >
+        <div>Child 1</div>
+        <div>Child 2</div>
+        <div>Child 3</div>
+      </InfiniteList>
+    );
+
+    wrapper
+      .find('.infinite-list')
+      .simulate('scroll', {
+        target: {
+          clientHeight: 750,
+          scrollHeight: 1000,
+          scrollTop: 250,
+        },
+      });
+
+    onThresholdReach.alwaysCalledWithExactly({
+      target: {
+        clientHeight: 750,
+        scrollHeight: 1000,
+        scrollTop: 250,
+      },
+    }).should.be.equal(true);
+  });
+
   it('should trigger onThresholdReach callback on scroll if default threshold is reach', () => {
     const onThresholdReach = sinon.spy();
 
