@@ -11,8 +11,9 @@
     "build:lib": "babel ./src --out-dir ./lib --ignore **/*.spec.js",
     "build:umd": "NODE_ENV=development webpack ./src/index.js ./dist/react-infinite-list.js --config webpack.prod.config.js --progress",
     "build:umd:min": "NODE_ENV=production webpack ./src/index.js ./dist/react-infinite-list.min.js --config webpack.prod.config.js --progress",
-    "test": "mocha --require babel-register --require test-setup.js \"./src/**/*.spec.js\"",
-    "test:watch": "npm test -- --watch"
+    "test": "npm run mocha -- \"./src/**/*.spec.js\"",
+    "mocha": "mocha --require babel-register --require test-setup.js",
+    "mocha:watch": "npm run mocha -- --watch"
   },
   "repository": {
     "type": "git",
