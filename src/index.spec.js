@@ -31,7 +31,7 @@ describe('<InfiniteList />', () => {
         <div>Child 1</div>
         <div>Child 2</div>
         <div>Child 3</div>
-      </InfiniteList>
+      </InfiniteList>,
     );
 
     wrapper.containsMatchingElement(expectation).should.be.equal(true);
@@ -62,7 +62,7 @@ describe('<InfiniteList />', () => {
         <div>Child 1</div>
         <div>Child 2</div>
         <div>Child 3</div>
-      </InfiniteList>
+      </InfiniteList>,
     );
 
     wrapper.containsMatchingElement(expectation).should.be.equal(true);
@@ -81,7 +81,7 @@ describe('<InfiniteList />', () => {
         <div>Child 1</div>
         <div>Child 2</div>
         <div>Child 3</div>
-      </InfiniteList>
+      </InfiniteList>,
     );
 
     wrapper
@@ -116,7 +116,7 @@ describe('<InfiniteList />', () => {
         <div>Child 1</div>
         <div>Child 2</div>
         <div>Child 3</div>
-      </InfiniteList>
+      </InfiniteList>,
     );
 
     wrapper
@@ -146,7 +146,7 @@ describe('<InfiniteList />', () => {
         <div>Child 1</div>
         <div>Child 2</div>
         <div>Child 3</div>
-      </InfiniteList>
+      </InfiniteList>,
     );
 
     wrapper
@@ -175,7 +175,7 @@ describe('<InfiniteList />', () => {
         <div>Child 1</div>
         <div>Child 2</div>
         <div>Child 3</div>
-      </InfiniteList>
+      </InfiniteList>,
     );
 
     wrapper
@@ -205,7 +205,7 @@ describe('<InfiniteList />', () => {
         <div>Child 1</div>
         <div>Child 2</div>
         <div>Child 3</div>
-      </InfiniteList>
+      </InfiniteList>,
     );
 
     wrapper
@@ -234,7 +234,7 @@ describe('<InfiniteList />', () => {
         <div>Child 1</div>
         <div>Child 2</div>
         <div>Child 3</div>
-      </InfiniteList>
+      </InfiniteList>,
     );
 
     wrapper
@@ -263,7 +263,7 @@ describe('<InfiniteList />', () => {
         <div>Child 1</div>
         <div>Child 2</div>
         <div>Child 3</div>
-      </InfiniteList>
+      </InfiniteList>,
     );
 
     wrapper
