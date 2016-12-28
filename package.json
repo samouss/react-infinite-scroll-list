@@ -6,7 +6,8 @@
   "scripts": {
     "clean": "rm -rf dist lib",
     "start": "webpack-dev-server --config webpack.dev.config.js --inline --hot --content-base dist --no-info --open",
-    "prepublish": "npm run build",
+    "prepublish": "npm run lint && npm run build",
+    "lint": "eslint src example",
     "build": "npm run clean && npm run build:lib && npm run build:umd && npm run build:umd:min",
     "build:lib": "babel src --out-dir lib --ignore **/*.spec.js",
     "build:umd": "NODE_ENV=development webpack src/index.js dist/react-infinite-list.js --config webpack.prod.config.js --progress",
