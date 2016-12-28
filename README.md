@@ -29,6 +29,7 @@ Then use it juste like that:
 <InfiniteList
   className="custom-class-name"
   containerHeight="648px"
+  containerTagName="div"
   isLoading={true|false}
   isEndReach={true|false}
   onThresholdReach={() => { console.log('Load more content') }}
