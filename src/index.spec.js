@@ -41,27 +41,28 @@ describe('<InfiniteList />', () => {
     const onThresholdReach = () => {};
 
     const expectation = (
-      <div
+      <ul
         className="custom-infinite-list"
         style={{ height: '750px', overflowY: 'scroll' }}
       >
-        <div>Child 1</div>
-        <div>Child 2</div>
-        <div>Child 3</div>
-      </div>
+        <li>Child 1</li>
+        <li>Child 2</li>
+        <li>Child 3</li>
+      </ul>
     );
 
     const wrapper = shallow(
       <InfiniteList
         className="custom-infinite-list"
         containerHeight="750px"
+        containerTagName="ul"
         isLoading={false}
         isEndReach={false}
         onThresholdReach={onThresholdReach}
       >
-        <div>Child 1</div>
-        <div>Child 2</div>
-        <div>Child 3</div>
+        <li>Child 1</li>
+        <li>Child 2</li>
+        <li>Child 3</li>
       </InfiniteList>,
     );
 

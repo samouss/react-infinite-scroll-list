@@ -13,17 +13,21 @@ export default function InfiniteList(props) {
     onThresholdReach,
     children,
     className = 'infinite-list',
+    containerTagName = 'div',
     threshold = 0,
   } = props;
+  // @NOTE: use capitalize letter for for avoid JSX to create
+  // <containerTagName> instead of <div>
+  const ContainerTagName = containerTagName;
 
   return (
-    <div
+    <ContainerTagName
       className={className}
       style={{ height: containerHeight, overflowY: 'scroll' }}
       onScroll={onScroll(isLoading, isEndReach, threshold, onThresholdReach)}
     >
       {children}
-    </div>
+    </ContainerTagName>
   );
 }
 
@@ -61,5 +65,6 @@ InfiniteList.propTypes = {
   onThresholdReach: PropTypes.func.isRequired,
   children: PropTypes.node,
   className: PropTypes.string,
+  containerTagName: PropTypes.string,
   threshold: PropTypes.number,
 };
