@@ -1,11 +1,5 @@
 import React, { PropTypes } from 'react';
 
-/**
- * @name   InfiniteList
- * @desc   Display given children nodes and attach scroll event
- *         on <ul> for handle reload on scroll
- * @return {ReactElement}
- */
 export default function InfiniteList(props) {
   const {
     containerHeight,
@@ -32,16 +26,6 @@ export default function InfiniteList(props) {
   );
 }
 
-/**
- * @name   onScroll
- * @desc   Takes given props for determine then return function who takes
- *         event and determine if we need to execute callback for load more content
- * @param  {boolean}                      isLoading
- * @param  {boolean}                      isEndReach
- * @param  {number}                       threshold
- * @param  {Function}                     callback
- * @return {(event: ScrollEvent) => void}
- */
 function onScroll(isLoading, isEndReach, threshold, callback) {
   return (event) => {
     if (isLoading || isEndReach) {
