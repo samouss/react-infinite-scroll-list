@@ -1,16 +1,30 @@
 import React, { PropTypes } from 'react';
 
-export default function InfiniteList(props) {
-  const {
-    containerHeight,
-    isLoading,
-    isEndReach,
-    onThresholdReach,
-    children,
-    className,
-    containerTagName,
-    threshold,
-  } = props;
+const onScroll = (isLoading, isEndReach, threshold, callback) => (event) => {
+  if (isLoading || isEndReach) {
+    return;
+  }
+
+  const { target } = event;
+
+  const scrollPosition = Math.ceil(target.clientHeight + target.scrollTop);
+  const scrollThreshold = target.scrollHeight - threshold;
+
+  if (scrollPosition >= scrollThreshold) {
+    callback(event);
+  }
+};
+
+const InfiniteList = ({
+  containerHeight,
+  isLoading,
+  isEndReach,
+  onThresholdReach,
+  children,
+  className,
+  containerTagName,
+  threshold,
+}) => {
   // @NOTE: use capitalize letter for for avoid JSX to create
   // <containerTagName> instead of <div>
   const ContainerTagName = containerTagName;
@@ -24,24 +38,7 @@ export default function InfiniteList(props) {
       {children}
     </ContainerTagName>
   );
-}
-
-function onScroll(isLoading, isEndReach, threshold, callback) {
-  return (event) => {
-    if (isLoading || isEndReach) {
-      return;
-    }
-
-    const { target } = event;
-
-    const scrollPosition = Math.ceil(target.clientHeight + target.scrollTop);
-    const scrollThreshold = target.scrollHeight - threshold;
-
-    if (scrollPosition >= scrollThreshold) {
-      callback(event);
-    }
-  };
-}
+};
 
 InfiniteList.propTypes = {
   containerHeight: PropTypes.string.isRequired,
@@ -60,3 +57,5 @@ InfiniteList.defaultProps = {
   containerTagName: 'div',
   threshold: 0,
 };
+
+export default InfiniteList;
