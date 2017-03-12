@@ -7,9 +7,9 @@ export default function InfiniteList(props) {
     isEndReach,
     onThresholdReach,
     children,
-    className = 'infinite-list',
-    containerTagName = 'div',
-    threshold = 0,
+    className,
+    containerTagName,
+    threshold,
   } = props;
   // @NOTE: use capitalize letter for for avoid JSX to create
   // <containerTagName> instead of <div>
@@ -52,4 +52,11 @@ InfiniteList.propTypes = {
   className: PropTypes.string,
   containerTagName: PropTypes.string,
   threshold: PropTypes.number,
+};
+
+InfiniteList.defaultProps = {
+  children: null,
+  className: 'infinite-list',
+  containerTagName: 'div',
+  threshold: 0,
 };
