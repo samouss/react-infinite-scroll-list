@@ -5,13 +5,13 @@
   "main": "lib/index.js",
   "scripts": {
     "clean": "rm -rf dist lib",
-    "start": "webpack-dev-server --config webpack.dev.config.js --inline --hot --content-base dist --no-info --open",
+    "start": "webpack-dev-server --config webpack.example.config.js --inline --hot --content-base dist --no-info --open",
     "prepublish": "npm run lint && npm run build",
     "lint": "eslint src example",
     "build": "npm run clean && npm run build:lib && npm run build:umd && npm run build:umd:min",
     "build:lib": "babel src --out-dir lib --ignore **/*.spec.js",
-    "build:umd": "NODE_ENV=development webpack src/index.js dist/react-infinite-list.js --config webpack.prod.config.js --progress",
-    "build:umd:min": "NODE_ENV=production webpack src/index.js dist/react-infinite-list.min.js --config webpack.prod.config.js --progress",
+    "build:umd": "webpack src/index.js dist/react-infinite-list.js --config webpack.config.js --progress",
+    "build:umd:min": "webpack src/index.js dist/react-infinite-list.min.js --config webpack.config.js --env.production --progress ",
     "test": "npm run mocha -- \"src/**/*.spec.js\"",
     "mocha": "mocha --require babel-register --require test-setup.js",
     "mocha:watch": "npm run mocha -- --watch"
@@ -62,8 +62,8 @@
     "react-dom": "15.4.2",
     "sinon": "1.17.7",
     "style-loader": "0.13.2",
-    "webpack": "1.14.0",
-    "webpack-dev-server": "1.16.2"
+    "webpack": "2.2.1",
+    "webpack-dev-server": "2.4.1"
   },
   "peerDependencies": {
     "react": "^15.0.0"
