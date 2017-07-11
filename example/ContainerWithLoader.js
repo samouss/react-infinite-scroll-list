@@ -61,6 +61,7 @@ export default class ContainerWithLoader extends Component {
           containerHeight="648px"
           isLoading={isLoading}
           isEndReach={isEndReach}
+          isAttachOnWindow={false}
           onThresholdReach={this.createElement}
           threshold={150}
         >

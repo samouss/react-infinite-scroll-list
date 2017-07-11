@@ -51,6 +51,7 @@ export default class ContainerWithCustomTagName extends Component {
           containerHeight="648px"
           isLoading={isLoading}
           isEndReach={isEndReach}
+          isAttachOnWindow={false}
           containerTagName="ul"
           threshold={150}
           onThresholdReach={this.createElement}
