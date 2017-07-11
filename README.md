@@ -31,8 +31,9 @@ Then use it juste like that:
   containerHeight="648px"
   containerTagName="div"
   isLoading={true|false}
-  isEndReach={true|false}
-  onThresholdReach={() => { console.log('Load more content') }}
+  isEndReached={true|false}
+  isAttachOnWindow={true|false}
+  onReachThreshold={() => { console.log('Load more content') }}
   threshold={150}
 >
   {items.map(item => (
