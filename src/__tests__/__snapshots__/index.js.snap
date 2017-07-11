@@ -1,391 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<InfiniteList /> expect to render with default props 1`] = `
-ShallowWrapper {
-  "complexSelector": ComplexSelector {
-    "buildPredicate": [Function],
-    "childrenOfNode": [Function],
-    "findWhereUnwrapped": [Function],
-  },
-  "length": 1,
-  "node": <div
-    className="infinite-list"
-    onScroll={[Function]}
-    style={
-        Object {
-            "height": "750px",
-            "overflowY": "scroll",
-          }
+<div
+  className="infinite-list"
+  onScroll={[Function]}
+  style={
+    Object {
+      "height": "750px",
+      "overflowY": "scroll",
     }
+  }
 >
-    <div>
-        Child 1
-    </div>
-    <div>
-        Child 2
-    </div>
-    <div>
-        Child 3
-    </div>
-</div>,
-  "nodes": Array [
-    <div
-      className="infinite-list"
-      onScroll={[Function]}
-      style={
-            Object {
-                  "height": "750px",
-                  "overflowY": "scroll",
-                }
-      }
->
-      <div>
-            Child 1
-      </div>
-      <div>
-            Child 2
-      </div>
-      <div>
-            Child 3
-      </div>
-</div>,
-  ],
-  "options": Object {},
-  "renderer": ReactShallowRenderer {
-    "_instance": ShallowComponentWrapper {
-      "_calledComponentWillUnmount": false,
-      "_compositeType": 2,
-      "_context": Object {},
-      "_currentElement": <InfiniteList
-        className="infinite-list"
-        containerHeight="750px"
-        containerTagName="div"
-        isEndReach={false}
-        isLoading={false}
-        onThresholdReach={[Function]}
-        threshold={0}
->
-        <div>
-                Child 1
-        </div>
-        <div>
-                Child 2
-        </div>
-        <div>
-                Child 3
-        </div>
-</InfiniteList>,
-      "_debugID": 1,
-      "_hostContainerInfo": null,
-      "_hostParent": null,
-      "_instance": StatelessComponent {
-        "_reactInternalInstance": [Circular],
-        "context": Object {},
-        "props": Object {
-          "children": Array [
-            <div>
-              Child 1
-</div>,
-            <div>
-              Child 2
-</div>,
-            <div>
-              Child 3
-</div>,
-          ],
-          "className": "infinite-list",
-          "containerHeight": "750px",
-          "containerTagName": "div",
-          "isEndReach": false,
-          "isLoading": false,
-          "onThresholdReach": [Function],
-          "threshold": 0,
-        },
-        "refs": Object {},
-        "state": null,
-        "updater": Object {
-          "enqueueCallback": [Function],
-          "enqueueCallbackInternal": [Function],
-          "enqueueElementInternal": [Function],
-          "enqueueForceUpdate": [Function],
-          "enqueueReplaceState": [Function],
-          "enqueueSetState": [Function],
-          "isMounted": [Function],
-          "validateCallback": [Function],
-        },
-      },
-      "_mountOrder": 1,
-      "_pendingCallbacks": null,
-      "_pendingElement": null,
-      "_pendingForceUpdate": false,
-      "_pendingReplaceState": false,
-      "_pendingStateQueue": null,
-      "_renderedComponent": NoopInternalComponent {
-        "_currentElement": <div
-          className="infinite-list"
-          onScroll={[Function]}
-          style={
-                    Object {
-                              "height": "750px",
-                              "overflowY": "scroll",
-                            }
-          }
->
-          <div>
-                    Child 1
-          </div>
-          <div>
-                    Child 2
-          </div>
-          <div>
-                    Child 3
-          </div>
-</div>,
-        "_debugID": 2,
-        "_renderedOutput": <div
-          className="infinite-list"
-          onScroll={[Function]}
-          style={
-                    Object {
-                              "height": "750px",
-                              "overflowY": "scroll",
-                            }
-          }
->
-          <div>
-                    Child 1
-          </div>
-          <div>
-                    Child 2
-          </div>
-          <div>
-                    Child 3
-          </div>
-</div>,
-      },
-      "_renderedNodeType": 0,
-      "_rootNodeID": 0,
-      "_topLevelWrapper": null,
-      "_updateBatchNumber": null,
-      "_warnedAboutRefsInRender": false,
-    },
-    "getRenderOutput": [Function],
-    "render": [Function],
-  },
-  "root": [Circular],
-  "unrendered": <InfiniteList
-    className="infinite-list"
-    containerHeight="750px"
-    containerTagName="div"
-    isEndReach={false}
-    isLoading={false}
-    onThresholdReach={[Function]}
-    threshold={0}
->
-    <div>
-        Child 1
-    </div>
-    <div>
-        Child 2
-    </div>
-    <div>
-        Child 3
-    </div>
-</InfiniteList>,
-}
+  <div>
+    Child 1
+  </div>
+  <div>
+    Child 2
+  </div>
+  <div>
+    Child 3
+  </div>
+</div>
 `;
 
 exports[`<InfiniteList /> expect to render with given props 1`] = `
-ShallowWrapper {
-  "complexSelector": ComplexSelector {
-    "buildPredicate": [Function],
-    "childrenOfNode": [Function],
-    "findWhereUnwrapped": [Function],
-  },
-  "length": 1,
-  "node": <ul
-    className="custom-infinite-list"
-    onScroll={[Function]}
-    style={
-        Object {
-            "height": "750px",
-            "overflowY": "scroll",
-          }
+<ul
+  className="custom-infinite-list"
+  onScroll={[Function]}
+  style={
+    Object {
+      "height": "750px",
+      "overflowY": "scroll",
     }
+  }
 >
-    <li>
-        Child 1
-    </li>
-    <li>
-        Child 2
-    </li>
-    <li>
-        Child 3
-    </li>
-</ul>,
-  "nodes": Array [
-    <ul
-      className="custom-infinite-list"
-      onScroll={[Function]}
-      style={
-            Object {
-                  "height": "750px",
-                  "overflowY": "scroll",
-                }
-      }
->
-      <li>
-            Child 1
-      </li>
-      <li>
-            Child 2
-      </li>
-      <li>
-            Child 3
-      </li>
-</ul>,
-  ],
-  "options": Object {},
-  "renderer": ReactShallowRenderer {
-    "_instance": ShallowComponentWrapper {
-      "_calledComponentWillUnmount": false,
-      "_compositeType": 2,
-      "_context": Object {},
-      "_currentElement": <InfiniteList
-        className="custom-infinite-list"
-        containerHeight="750px"
-        containerTagName="ul"
-        isEndReach={false}
-        isLoading={false}
-        onThresholdReach={[Function]}
-        threshold={0}
->
-        <li>
-                Child 1
-        </li>
-        <li>
-                Child 2
-        </li>
-        <li>
-                Child 3
-        </li>
-</InfiniteList>,
-      "_debugID": 3,
-      "_hostContainerInfo": null,
-      "_hostParent": null,
-      "_instance": StatelessComponent {
-        "_reactInternalInstance": [Circular],
-        "context": Object {},
-        "props": Object {
-          "children": Array [
-            <li>
-              Child 1
-</li>,
-            <li>
-              Child 2
-</li>,
-            <li>
-              Child 3
-</li>,
-          ],
-          "className": "custom-infinite-list",
-          "containerHeight": "750px",
-          "containerTagName": "ul",
-          "isEndReach": false,
-          "isLoading": false,
-          "onThresholdReach": [Function],
-          "threshold": 0,
-        },
-        "refs": Object {},
-        "state": null,
-        "updater": Object {
-          "enqueueCallback": [Function],
-          "enqueueCallbackInternal": [Function],
-          "enqueueElementInternal": [Function],
-          "enqueueForceUpdate": [Function],
-          "enqueueReplaceState": [Function],
-          "enqueueSetState": [Function],
-          "isMounted": [Function],
-          "validateCallback": [Function],
-        },
-      },
-      "_mountOrder": 2,
-      "_pendingCallbacks": null,
-      "_pendingElement": null,
-      "_pendingForceUpdate": false,
-      "_pendingReplaceState": false,
-      "_pendingStateQueue": null,
-      "_renderedComponent": NoopInternalComponent {
-        "_currentElement": <ul
-          className="custom-infinite-list"
-          onScroll={[Function]}
-          style={
-                    Object {
-                              "height": "750px",
-                              "overflowY": "scroll",
-                            }
-          }
->
-          <li>
-                    Child 1
-          </li>
-          <li>
-                    Child 2
-          </li>
-          <li>
-                    Child 3
-          </li>
-</ul>,
-        "_debugID": 4,
-        "_renderedOutput": <ul
-          className="custom-infinite-list"
-          onScroll={[Function]}
-          style={
-                    Object {
-                              "height": "750px",
-                              "overflowY": "scroll",
-                            }
-          }
->
-          <li>
-                    Child 1
-          </li>
-          <li>
-                    Child 2
-          </li>
-          <li>
-                    Child 3
-          </li>
-</ul>,
-      },
-      "_renderedNodeType": 0,
-      "_rootNodeID": 0,
-      "_topLevelWrapper": null,
-      "_updateBatchNumber": null,
-      "_warnedAboutRefsInRender": false,
-    },
-    "getRenderOutput": [Function],
-    "render": [Function],
-  },
-  "root": [Circular],
-  "unrendered": <InfiniteList
-    className="custom-infinite-list"
-    containerHeight="750px"
-    containerTagName="ul"
-    isEndReach={false}
-    isLoading={false}
-    onThresholdReach={[Function]}
-    threshold={0}
->
-    <li>
-        Child 1
-    </li>
-    <li>
-        Child 2
-    </li>
-    <li>
-        Child 3
-    </li>
-</InfiniteList>,
-}
+  <li>
+    Child 1
+  </li>
+  <li>
+    Child 2
+  </li>
+  <li>
+    Child 3
+  </li>
+</ul>
 `;
