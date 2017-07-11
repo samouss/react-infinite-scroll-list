@@ -43,7 +43,7 @@ module.exports = (options = {}) => {
       ],
     },
     plugins: clean([
-      isProduction && new webpack.optimize.OccurrenceOrderPlugin(),
+      isProduction && new webpack.optimize.ModuleConcatenationPlugin(),
 
       isProduction && new webpack.DefinePlugin({
         'process.env': {
