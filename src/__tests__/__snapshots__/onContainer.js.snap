@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<InfiniteList /> expect to render with default props 1`] = `
+exports[`<InfiniteList /> on Container expect to render with default props 1`] = `
 <div
   className="infinite-list"
   onScroll={[Function]}
@@ -23,7 +23,7 @@ exports[`<InfiniteList /> expect to render with default props 1`] = `
 </div>
 `;
 
-exports[`<InfiniteList /> expect to render with given props 1`] = `
+exports[`<InfiniteList /> on Container expect to render with given props 1`] = `
 <ul
   className="custom-infinite-list"
   onScroll={[Function]}

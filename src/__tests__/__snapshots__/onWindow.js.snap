@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InfiniteList /> on Window expect to render with default props 1`] = `
+<div
+  className="infinite-list"
+>
+  <div>
+    Child 1
+  </div>
+  <div>
+    Child 2
+  </div>
+  <div>
+    Child 3
+  </div>
+</div>
+`;
+
+exports[`<InfiniteList /> on Window expect to render with given props 1`] = `
+<ul
+  className="custom-infinite-list"
+>
+  <li>
+    Child 1
+  </li>
+  <li>
+    Child 2
+  </li>
+  <li>
+    Child 3
+  </li>
+</ul>
+`;
