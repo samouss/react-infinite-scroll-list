@@ -52,7 +52,7 @@ class InfiniteList extends Component {
     return {};
   }
 
-  createPropsForContainer() {
+  createPropsWithContainer() {
     const { containerHeight } = this.props;
 
     return {
@@ -70,7 +70,7 @@ class InfiniteList extends Component {
     // <containerTagName> instead of <div>
     const ContainerTagName = containerTagName;
     const props = isAttachOnWindow ? this.createPropsWithWindow()
-      : this.createPropsForContainer();
+      : this.createPropsWithContainer();
 
     return (
       <ContainerTagName
