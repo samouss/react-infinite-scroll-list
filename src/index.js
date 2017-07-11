@@ -22,9 +22,9 @@ class InfiniteList extends Component {
   }
 
   onScroll(event) {
-    const { isLoading, isEndReach, isAttachOnWindow, threshold, onThresholdReach } = this.props;
+    const { isLoading, isEndReached, isAttachOnWindow, threshold, onReachThreshold } = this.props;
 
-    if (isLoading || isEndReach) {
+    if (isLoading || isEndReached) {
       return;
     }
 
@@ -43,7 +43,7 @@ class InfiniteList extends Component {
     const scrollThreshold = scrollHeight - threshold;
 
     if (scrollPosition >= scrollThreshold) {
-      onThresholdReach(event);
+      onReachThreshold(event);
     }
   }
 
@@ -86,9 +86,9 @@ class InfiniteList extends Component {
 
 InfiniteList.propTypes = {
   isLoading: PropTypes.bool.isRequired,
-  isEndReach: PropTypes.bool.isRequired,
+  isEndReached: PropTypes.bool.isRequired,
   isAttachOnWindow: PropTypes.bool.isRequired,
-  onThresholdReach: PropTypes.func.isRequired,
+  onReachThreshold: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
   containerHeight: PropTypes.string,
   className: PropTypes.string,

@@ -6,9 +6,9 @@ describe('<InfiniteList /> on Container', () => {
   const defaultProps = {
     containerHeight: '750px',
     isLoading: false,
-    isEndReach: false,
+    isEndReached: false,
     isAttachOnWindow: false,
-    onThresholdReach: () => {},
+    onReachThreshold: () => {},
   };
 
   it('expect to render with default props', () => {
@@ -82,10 +82,10 @@ describe('<InfiniteList /> on Container', () => {
   });
 
   describe('onScroll', () => {
-    it('expect to call onThresholdReach with event as parameter', () => {
+    it('expect to call onReachThreshold with event as parameter', () => {
       const props = {
         ...defaultProps,
-        onThresholdReach: jest.fn(),
+        onReachThreshold: jest.fn(),
       };
 
       const component = shallow(
@@ -106,7 +106,7 @@ describe('<InfiniteList /> on Container', () => {
         },
       });
 
-      expect(props.onThresholdReach).toHaveBeenCalledWith({
+      expect(props.onReachThreshold).toHaveBeenCalledWith({
         currentTarget: {
           clientHeight: 750,
           scrollHeight: 1000,
@@ -115,10 +115,10 @@ describe('<InfiniteList /> on Container', () => {
       });
     });
 
-    it('expect to call onThresholdReach if default threshold is reach', () => {
+    it('expect to call onReachThreshold if default threshold is reach', () => {
       const props = {
         ...defaultProps,
-        onThresholdReach: jest.fn(),
+        onReachThreshold: jest.fn(),
       };
 
       const component = shallow(
@@ -139,13 +139,13 @@ describe('<InfiniteList /> on Container', () => {
         },
       });
 
-      expect(props.onThresholdReach).toHaveBeenCalledTimes(1);
+      expect(props.onReachThreshold).toHaveBeenCalledTimes(1);
     });
 
-    it('expect to call onThresholdReach if given threshold is reach', () => {
+    it('expect to call onReachThreshold if given threshold is reach', () => {
       const props = {
         ...defaultProps,
-        onThresholdReach: jest.fn(),
+        onReachThreshold: jest.fn(),
         threshold: 100,
       };
 
@@ -167,13 +167,13 @@ describe('<InfiniteList /> on Container', () => {
         },
       });
 
-      expect(props.onThresholdReach).toHaveBeenCalledTimes(1);
+      expect(props.onReachThreshold).toHaveBeenCalledTimes(1);
     });
 
-    it('expect to not call onThresholdReach if default threshold is not reach', () => {
+    it('expect to not call onReachThreshold if default threshold is not reach', () => {
       const props = {
         ...defaultProps,
-        onThresholdReach: jest.fn(),
+        onReachThreshold: jest.fn(),
       };
 
       const component = shallow(
@@ -194,13 +194,13 @@ describe('<InfiniteList /> on Container', () => {
         },
       });
 
-      expect(props.onThresholdReach).not.toHaveBeenCalled();
+      expect(props.onReachThreshold).not.toHaveBeenCalled();
     });
 
-    it('expect to not call onThresholdReach if given threshold is not reach', () => {
+    it('expect to not call onReachThreshold if given threshold is not reach', () => {
       const props = {
         ...defaultProps,
-        onThresholdReach: jest.fn(),
+        onReachThreshold: jest.fn(),
         threshold: 100,
       };
 
@@ -222,13 +222,13 @@ describe('<InfiniteList /> on Container', () => {
         },
       });
 
-      expect(props.onThresholdReach).not.toHaveBeenCalled();
+      expect(props.onReachThreshold).not.toHaveBeenCalled();
     });
 
-    it('expect to not call onThresholdReach if loading is true', () => {
+    it('expect to not call onReachThreshold if loading is true', () => {
       const props = {
         ...defaultProps,
-        onThresholdReach: jest.fn(),
+        onReachThreshold: jest.fn(),
         isLoading: true,
       };
 
@@ -250,14 +250,14 @@ describe('<InfiniteList /> on Container', () => {
         },
       });
 
-      expect(props.onThresholdReach).not.toHaveBeenCalled();
+      expect(props.onReachThreshold).not.toHaveBeenCalled();
     });
 
-    it('expect to not call onThresholdReach if end is reach', () => {
+    it('expect to not call onReachThreshold if end is reach', () => {
       const props = {
         ...defaultProps,
-        onThresholdReach: jest.fn(),
-        isEndReach: true,
+        onReachThreshold: jest.fn(),
+        isEndReached: true,
       };
 
       const component = shallow(
@@ -278,7 +278,7 @@ describe('<InfiniteList /> on Container', () => {
         },
       });
 
-      expect(props.onThresholdReach).not.toHaveBeenCalled();
+      expect(props.onReachThreshold).not.toHaveBeenCalled();
     });
   });
 });
