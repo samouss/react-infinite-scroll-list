@@ -8,7 +8,7 @@ export default class ContainerWithLoader extends Component {
 
     this.state = {
       isLoading: false,
-      isEndReach: false,
+      isEndReached: false,
       items: [],
     };
 
@@ -50,7 +50,7 @@ export default class ContainerWithLoader extends Component {
   }
 
   render() {
-    const { isLoading, isEndReach, items } = this.state;
+    const { isLoading, isEndReached, items } = this.state;
 
     return (
       <div>
@@ -60,9 +60,9 @@ export default class ContainerWithLoader extends Component {
           className="custom-infinite-list"
           containerHeight="648px"
           isLoading={isLoading}
-          isEndReach={isEndReach}
+          isEndReached={isEndReached}
           isAttachOnWindow={false}
-          onThresholdReach={this.createElement}
+          onReachThreshold={this.createElement}
           threshold={150}
         >
           {items.map(item => (

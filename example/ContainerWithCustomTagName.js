@@ -8,7 +8,7 @@ export default class ContainerWithCustomTagName extends Component {
 
     this.state = {
       isLoading: false,
-      isEndReach: false,
+      isEndReached: false,
       items: [],
     };
 
@@ -40,7 +40,7 @@ export default class ContainerWithCustomTagName extends Component {
   }
 
   render() {
-    const { isLoading, isEndReach, items } = this.state;
+    const { isLoading, isEndReached, items } = this.state;
 
     return (
       <div>
@@ -50,11 +50,11 @@ export default class ContainerWithCustomTagName extends Component {
           className="custom-infinite-list"
           containerHeight="648px"
           isLoading={isLoading}
-          isEndReach={isEndReach}
+          isEndReached={isEndReached}
           isAttachOnWindow={false}
           containerTagName="ul"
           threshold={150}
-          onThresholdReach={this.createElement}
+          onReachThreshold={this.createElement}
         >
           {items.map(item => (
             <li
