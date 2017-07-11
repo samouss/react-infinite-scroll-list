@@ -1,45 +1,54 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const onScroll = (isLoading, isEndReach, threshold, callback) => (event) => {
-  if (isLoading || isEndReach) {
-    return;
+class InfiniteList extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.onScroll = this.onScroll.bind(this);
   }
 
-  const { target } = event;
+  onScroll(event) {
+    const { isLoading, isEndReach, threshold, onThresholdReach } = this.props;
 
-  const scrollPosition = Math.ceil(target.clientHeight + target.scrollTop);
-  const scrollThreshold = target.scrollHeight - threshold;
+    if (isLoading || isEndReach) {
+      return;
+    }
 
-  if (scrollPosition >= scrollThreshold) {
-    callback(event);
+    const { target } = event;
+
+    const scrollPosition = Math.ceil(target.clientHeight + target.scrollTop);
+    const scrollThreshold = target.scrollHeight - threshold;
+
+    if (scrollPosition >= scrollThreshold) {
+      onThresholdReach(event);
+    }
   }
-};
 
-const InfiniteList = ({
-  containerHeight,
-  isLoading,
-  isEndReach,
-  onThresholdReach,
-  children,
-  className,
-  containerTagName,
-  threshold,
-}) => {
-  // @NOTE: use capitalize letter for for avoid JSX to create
-  // <containerTagName> instead of <div>
-  const ContainerTagName = containerTagName;
+  render() {
+    const {
+      containerHeight,
+      children,
+      className,
+      containerTagName,
+    } = this.props;
+    // @NOTE: use capitalize letter for for avoid JSX to create
+    // <containerTagName> instead of <div>
+    const ContainerTagName = containerTagName;
 
-  return (
-    <ContainerTagName
-      className={className}
-      style={{ height: containerHeight, overflowY: 'scroll' }}
-      onScroll={onScroll(isLoading, isEndReach, threshold, onThresholdReach)}
-    >
-      {children}
-    </ContainerTagName>
-  );
-};
+    return (
+      <ContainerTagName
+        className={className}
+        style={{ height: containerHeight, overflowY: 'scroll' }}
+        onScroll={this.onScroll}
+      >
+        {children}
+      </ContainerTagName>
+    );
+  }
+
+}
 
 InfiniteList.propTypes = {
   containerHeight: PropTypes.string.isRequired,
