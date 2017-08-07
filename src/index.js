@@ -1,103 +1,95 @@
+import 'intersection-observer';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+
+const ROOT_VIEWPORT_TYPE = 'viewport';
+const ROOT_CONTAINER_TYPE = 'container';
 
 class InfiniteList extends Component {
   constructor(props) {
     super(props);
 
-    this.onScroll = this.onScroll.bind(this);
+    this.onIntersection = this.onIntersection.bind(this);
   }
 
   componentDidMount() {
-    if (this.props.isAttachOnWindow) {
-      window.addEventListener('scroll', this.onScroll);
-    }
+    const { root } = this.props;
+
+    this.io = new IntersectionObserver(this.onIntersection, {
+      root: (root === ROOT_CONTAINER_TYPE) ? this.root : null,
+    });
+
+    this.io.observe(this.sentinel);
   }
 
   componentWillUnmount() {
-    if (this.props.isAttachOnWindow) {
-      window.removeEventListener('scroll', this.onScroll);
-    }
+    this.io.disconnect();
   }
 
-  onScroll(event) {
-    const { isLoading, isEndReached, isAttachOnWindow, threshold, onReachThreshold } = this.props;
+  onIntersection(entries) {
+    const { isLoading, isEndReached, onReachThreshold } = this.props;
 
     if (isLoading || isEndReached) {
       return;
     }
 
-    const { currentTarget } = event;
-
-    const height = isAttachOnWindow ? currentTarget.innerHeight
-      : currentTarget.clientHeight;
-
-    const scrollTop = isAttachOnWindow ? currentTarget.pageYOffset
-      : currentTarget.scrollTop;
-
-    const scrollHeight = isAttachOnWindow ? currentTarget.document.body.scrollHeight
-      : currentTarget.scrollHeight;
-
-    const scrollPosition = Math.ceil(height + scrollTop);
-    const scrollThreshold = scrollHeight - threshold;
-
-    if (scrollPosition >= scrollThreshold) {
-      onReachThreshold(event);
-    }
-  }
-
-  // eslint-disable-next-line
-  createPropsWithWindow() {
-    return {};
-  }
-
-  createPropsWithContainer() {
-    const { containerHeight } = this.props;
-
-    return {
-      onScroll: this.onScroll,
-      style: {
-        height: containerHeight,
-        overflowY: 'scroll',
-      },
-    };
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        onReachThreshold(entry);
+      }
+    });
   }
 
   render() {
-    const { isAttachOnWindow, children, containerTagName, className } = this.props;
-    // @NOTE: use capitalize letter for for avoid JSX to create
-    // <containerTagName> instead of <div>
+    const { children, className, containerTagName, sentinelTagName, threshold } = this.props;
     const ContainerTagName = containerTagName;
-    const props = isAttachOnWindow ? this.createPropsWithWindow()
-      : this.createPropsWithContainer();
+    const SentinelTagName = sentinelTagName;
+
+    const containerStyle = {
+      position: 'relative',
+    };
+
+    const sentinelStyle = {
+      position: 'absolute',
+      marginTop: `-${threshold}px`,
+    };
 
     return (
       <ContainerTagName
+        ref={(element) => { this.root = element; }}
         className={className}
-        {...props}
+        style={containerStyle}
       >
         {children}
+        <SentinelTagName
+          ref={(element) => { this.sentinel = element; }}
+          className="-risl-sentinel"
+          style={sentinelStyle}
+        />
       </ContainerTagName>
     );
   }
 }
 
 InfiniteList.propTypes = {
+  root: PropTypes.oneOf([
+    ROOT_VIEWPORT_TYPE,
+    ROOT_CONTAINER_TYPE,
+  ]).isRequired,
   isLoading: PropTypes.bool.isRequired,
   isEndReached: PropTypes.bool.isRequired,
-  isAttachOnWindow: PropTypes.bool.isRequired,
   onReachThreshold: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
-  containerHeight: PropTypes.string,
   className: PropTypes.string,
   containerTagName: PropTypes.string,
+  sentinelTagName: PropTypes.string,
   threshold: PropTypes.number,
 };
 
 InfiniteList.defaultProps = {
-  containerHeight: '',
   className: 'infinite-list',
   containerTagName: 'div',
+  sentinelTagName: 'div',
   threshold: 0,
 };
 
