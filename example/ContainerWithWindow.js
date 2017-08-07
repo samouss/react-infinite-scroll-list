@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import InfiniteList from '../src';
 
 export default class ContainerWithWindow extends Component {
-
   constructor(props) {
     super(props);
 
