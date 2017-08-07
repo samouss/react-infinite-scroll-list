@@ -1,19 +1,24 @@
 {
-  "extends": "airbnb",
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react",
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
-      "jsx": true
-    }
+      "jsx": true,
+    },
   },
   "plugins": [
     "react",
-    "jsx-a11y"
+    "jsx-a11y",
+    "prettier",
   ],
   "env": {
     "browser": true,
     "node": true,
-    "jest": true
+    "jest": true,
   },
   "rules": {
     "arrow-body-style": 0,
@@ -24,8 +29,17 @@
     "new-cap": 0,
     "no-console": 0,
     "no-shadow": 0,
-    "no-use-before-define": ["error", { "functions": false, "classes": true }],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "react/require-extension": "off"
+    "no-use-before-define": ["error", {
+      "functions": false,
+      "classes": true,
+    }],
+    "prettier/prettier": ["error", {
+      "singleQuote": true,
+      "trailingComma": "all",
+    }],
+    "react/jsx-filename-extension": ["error", {
+      "extensions": [".js", ".jsx"],
+    }],
+    "react/require-extension": 0,
   }
 }
