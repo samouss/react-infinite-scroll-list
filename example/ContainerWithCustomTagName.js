@@ -55,14 +55,11 @@ export default class ContainerWithCustomTagName extends Component {
           onReachThreshold={this.createElement}
           threshold={150}
         >
-          {items.map(item => (
-            <li
-              className="InfiniteList__Item"
-              key={item.id}
-            >
+          {items.map(item =>
+            <li className="InfiniteList__Item" key={item.id}>
               {item.message}
-            </li>
-          ))}
+            </li>,
+          )}
         </InfiniteList>
       </div>
     );

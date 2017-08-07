@@ -5,7 +5,7 @@ import InfiniteList from '../index';
 global.IntersectionObserver = jest.fn();
 
 describe('<InfiniteList /> on Container', () => {
-  const render = (props) => {
+  const render = props => {
     const defaultProps = {
       root: 'container',
       isLoading: false,
@@ -14,10 +14,7 @@ describe('<InfiniteList /> on Container', () => {
     };
 
     return shallow(
-      <InfiniteList
-        {...defaultProps}
-        {...props}
-      >
+      <InfiniteList {...defaultProps} {...props}>
         <div>Child 1</div>
         <div>Child 2</div>
         <div>Child 3</div>
@@ -80,10 +77,11 @@ describe('<InfiniteList /> on Container', () => {
 
       component.instance().componentDidMount();
 
-      expect(global.IntersectionObserver).toHaveBeenCalledWith(
-        component.instance().onIntersection,
-        { root: null },
-      );
+      expect(
+        global.IntersectionObserver,
+      ).toHaveBeenCalledWith(component.instance().onIntersection, {
+        root: null,
+      });
     });
 
     it('expect to create an IntersectionObserver on container', () => {
@@ -102,10 +100,11 @@ describe('<InfiniteList /> on Container', () => {
 
       component.instance().componentDidMount();
 
-      expect(global.IntersectionObserver).toHaveBeenCalledWith(
-        component.instance().onIntersection,
-        { root: 'container-element' },
-      );
+      expect(
+        global.IntersectionObserver,
+      ).toHaveBeenCalledWith(component.instance().onIntersection, {
+        root: 'container-element',
+      });
     });
 
     it('expect to observe the sentinel from IntersectionObserver', () => {
@@ -152,9 +151,7 @@ describe('<InfiniteList /> on Container', () => {
 
       const component = render(props);
 
-      component.instance().onIntersection([
-        { isIntersecting: true },
-      ]);
+      component.instance().onIntersection([{ isIntersecting: true }]);
 
       expect(props.onReachThreshold).toHaveBeenCalled();
     });
@@ -166,9 +163,7 @@ describe('<InfiniteList /> on Container', () => {
 
       const component = render(props);
 
-      component.instance().onIntersection([
-        { isIntersecting: false },
-      ]);
+      component.instance().onIntersection([{ isIntersecting: false }]);
 
       expect(props.onReachThreshold).not.toHaveBeenCalled();
     });

@@ -16,7 +16,7 @@ class InfiniteList extends Component {
     const { root } = this.props;
 
     this.io = new IntersectionObserver(this.onIntersection, {
-      root: (root === ROOT_CONTAINER_TYPE) ? this.root : null,
+      root: root === ROOT_CONTAINER_TYPE ? this.root : null,
     });
 
     this.io.observe(this.sentinel);
@@ -33,7 +33,7 @@ class InfiniteList extends Component {
       return;
     }
 
-    entries.forEach((entry) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         onReachThreshold(entry);
       }
@@ -41,7 +41,13 @@ class InfiniteList extends Component {
   }
 
   render() {
-    const { children, className, containerTagName, sentinelTagName, threshold } = this.props;
+    const {
+      children,
+      className,
+      containerTagName,
+      sentinelTagName,
+      threshold,
+    } = this.props;
     const ContainerTagName = containerTagName;
     const SentinelTagName = sentinelTagName;
 
@@ -56,13 +62,17 @@ class InfiniteList extends Component {
 
     return (
       <ContainerTagName
-        ref={(element) => { this.root = element; }}
+        ref={element => {
+          this.root = element;
+        }}
         className={className}
         style={containerStyle}
       >
         {children}
         <SentinelTagName
-          ref={(element) => { this.sentinel = element; }}
+          ref={element => {
+            this.sentinel = element;
+          }}
           className="-risl-sentinel"
           style={sentinelStyle}
         />
@@ -72,10 +82,7 @@ class InfiniteList extends Component {
 }
 
 InfiniteList.propTypes = {
-  root: PropTypes.oneOf([
-    ROOT_VIEWPORT_TYPE,
-    ROOT_CONTAINER_TYPE,
-  ]).isRequired,
+  root: PropTypes.oneOf([ROOT_VIEWPORT_TYPE, ROOT_CONTAINER_TYPE]).isRequired,
   isLoading: PropTypes.bool.isRequired,
   isEndReached: PropTypes.bool.isRequired,
   onReachThreshold: PropTypes.func.isRequired,

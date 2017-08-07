@@ -45,13 +45,7 @@ export default class ContainerWithLoader extends Component {
       return null;
     }
 
-    return (
-      <li
-        className="InfiniteList__Item"
-      >
-        Loading...
-      </li>
-    );
+    return <li className="InfiniteList__Item">Loading...</li>;
   }
 
   render() {
@@ -69,14 +63,11 @@ export default class ContainerWithLoader extends Component {
           onReachThreshold={this.createElement}
           threshold={150}
         >
-          {items.map(item => (
-            <div
-              className="InfiniteList__Item"
-              key={item.id}
-            >
+          {items.map(item =>
+            <div className="InfiniteList__Item" key={item.id}>
               {item.message}
-            </div>
-          ))}
+            </div>,
+          )}
           {this.renderFooter()}
         </InfiniteList>
       </div>
