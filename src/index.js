@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class InfiniteList extends Component {
-
   constructor(props) {
     super(props);
 
@@ -34,7 +33,7 @@ class InfiniteList extends Component {
       : currentTarget.clientHeight;
 
     const scrollTop = isAttachOnWindow ? currentTarget.pageYOffset
-     : currentTarget.scrollTop;
+      : currentTarget.scrollTop;
 
     const scrollHeight = isAttachOnWindow ? currentTarget.document.body.scrollHeight
       : currentTarget.scrollHeight;
@@ -81,7 +80,6 @@ class InfiniteList extends Component {
       </ContainerTagName>
     );
   }
-
 }
 
 InfiniteList.propTypes = {
