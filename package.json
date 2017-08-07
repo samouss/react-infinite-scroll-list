@@ -70,5 +70,8 @@
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ]
+  },
+  "dependencies": {
+    "intersection-observer": "0.4.0"
   }
 }
