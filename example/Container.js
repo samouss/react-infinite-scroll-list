@@ -43,20 +43,19 @@ export default class Container extends Component {
 
     return (
       <div>
-        <p className="title-infinite-list">Simple infite list</p>
+        <p className="Title">Simple infite list</p>
 
         <InfiniteList
-          className="custom-infinite-list"
-          containerHeight="648px"
+          className="InfiniteList InfiniteList--with-height"
+          root="container"
           isLoading={isLoading}
           isEndReached={isEndReached}
-          isAttachOnWindow={false}
           onReachThreshold={this.createElement}
           threshold={150}
         >
           {items.map(item => (
             <div
-              className="custom-infinite-list__item"
+              className="InfiniteList__Item"
               key={item.id}
             >
               {item.message}

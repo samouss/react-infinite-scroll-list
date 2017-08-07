@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import InfiniteList from '../src';
 
-export default class ContainerWithWindow extends Component {
+export default class ContainerWithViewport extends Component {
   constructor(props) {
     super(props);
 
@@ -43,19 +43,19 @@ export default class ContainerWithWindow extends Component {
 
     return (
       <div>
-        <p className="title-infinite-list">Simple infite list on window</p>
+        <p className="Title">Simple infite list on viewport</p>
 
         <InfiniteList
-          className="custom-infinite-list"
+          className="InfiniteList"
+          root="viewport"
           isLoading={isLoading}
           isEndReached={isEndReached}
-          isAttachOnWindow
           onReachThreshold={this.createElement}
           threshold={150}
         >
           {items.map(item => (
             <div
-              className="custom-infinite-list__item"
+              className="InfiniteList__Item"
               key={item.id}
             >
               {item.message}

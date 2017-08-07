@@ -10,13 +10,14 @@ body {
   background-color: #f7f7f7;
 }
 
-.title-infinite-list {
+.Title {
   text-align: center;
   font-size: 1.5rem;
 }
 
-.custom-infinite-list {
+.InfiniteList {
   width: 450px;
+  overflow-y: scroll;
   margin: 30px auto;
   list-style: none;
   padding: 0;
@@ -24,7 +25,11 @@ body {
   border: 1px solid #e6e6e6;
 }
 
-.custom-infinite-list__item {
+.InfiniteList--with-height {
+  height: 648px;
+}
+
+.InfiniteList__Item {
   display: flex;
   padding: 15px;
   height: 50px;

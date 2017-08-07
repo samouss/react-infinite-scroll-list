@@ -45,7 +45,13 @@ export default class ContainerWithLoader extends Component {
       return null;
     }
 
-    return <li className="custom-infinite-list__item">Loading...</li>;
+    return (
+      <li
+        className="InfiniteList__Item"
+      >
+        Loading...
+      </li>
+    );
   }
 
   render() {
@@ -53,20 +59,19 @@ export default class ContainerWithLoader extends Component {
 
     return (
       <div>
-        <p className="title-infinite-list">Simple infite list with loader</p>
+        <p className="Title">Simple infite list with loader</p>
 
         <InfiniteList
-          className="custom-infinite-list"
-          containerHeight="648px"
+          className="InfiniteList InfiniteList--with-height"
+          root="container"
           isLoading={isLoading}
           isEndReached={isEndReached}
-          isAttachOnWindow={false}
           onReachThreshold={this.createElement}
           threshold={150}
         >
           {items.map(item => (
             <div
-              className="custom-infinite-list__item"
+              className="InfiniteList__Item"
               key={item.id}
             >
               {item.message}

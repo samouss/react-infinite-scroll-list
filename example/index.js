@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import Container from './Container';
 import ContainerWithLoader from './ContainerWithLoader';
 import ContainerWithCustomTagName from './ContainerWithCustomTagName';
-import ContainerWithWindow from './ContainerWithWindow';
+import ContainerWithViewport from './ContainerWithViewport';
 import './index.css';
 
 const App = () => (
@@ -11,7 +11,7 @@ const App = () => (
     <Container />
     <ContainerWithLoader />
     <ContainerWithCustomTagName />
-    <ContainerWithWindow />
+    <ContainerWithViewport />
   </div>
 );
 

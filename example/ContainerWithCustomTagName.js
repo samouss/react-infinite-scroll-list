@@ -43,21 +43,21 @@ export default class ContainerWithCustomTagName extends Component {
 
     return (
       <div>
-        <p className="title-infinite-list">Simple infite list with custom tag</p>
+        <p className="Title">Simple infite list with custom tag</p>
 
         <InfiniteList
-          className="custom-infinite-list"
-          containerHeight="648px"
+          className="InfiniteList InfiniteList--with-height"
+          root="container"
           isLoading={isLoading}
           isEndReached={isEndReached}
-          isAttachOnWindow={false}
           containerTagName="ul"
-          threshold={150}
+          sentinelTagName="li"
           onReachThreshold={this.createElement}
+          threshold={150}
         >
           {items.map(item => (
             <li
-              className="custom-infinite-list__item"
+              className="InfiniteList__Item"
               key={item.id}
             >
               {item.message}
