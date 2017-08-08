@@ -5,14 +5,14 @@
   "main": "lib/index.js",
   "scripts": {
     "clean": "rm -rf dist lib",
-    "prepublish": "npm run lint && npm run build",
     "lint": "eslint src example",
     "build": "npm run clean && npm run build:lib && npm run build:umd && npm run build:umd:min",
     "build:lib": "babel src --out-dir lib --ignore __tests__",
     "build:umd": "webpack src/index.js dist/react-infinite-list.js --config webpack.config.js --progress",
     "build:umd:min": "webpack src/index.js dist/react-infinite-list.min.js --config webpack.config.js --env.production --progress ",
     "test": "jest",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "prepublishOnly": "npm run lint && npm run build"
   },
   "repository": {
     "type": "git",
