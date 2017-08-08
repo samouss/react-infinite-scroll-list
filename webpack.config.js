@@ -19,10 +19,18 @@ module.exports = (options = {}) => {
         commonjs: 'react',
         amd: 'react',
       },
+      'prop-types': {
+        root: 'PropTypes',
+        commonjs2: 'prop-types',
+        commonjs: 'prop-types',
+        amd: 'prop-types',
+      },
     },
-    performance: !isProduction ? false : {
-      hints: 'warning',
-    },
+    performance: !isProduction
+      ? false
+      : {
+          hints: 'warning',
+        },
     module: {
       loaders: [
         {
@@ -45,25 +53,27 @@ module.exports = (options = {}) => {
     plugins: clean([
       isProduction && new webpack.optimize.ModuleConcatenationPlugin(),
 
-      isProduction && new webpack.DefinePlugin({
-        'process.env': {
-          NODE_ENV: JSON.stringify('production'),
-        },
-      }),
+      isProduction &&
+        new webpack.DefinePlugin({
+          'process.env': {
+            NODE_ENV: JSON.stringify('production'),
+          },
+        }),
 
-      isProduction && new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          screw_ie8: true,
-          warnings: false,
-        },
-        mangle: {
-          screw_ie8: true,
-        },
-        output: {
-          comments: false,
-          screw_ie8: true,
-        },
-      }),
+      isProduction &&
+        new webpack.optimize.UglifyJsPlugin({
+          compress: {
+            screw_ie8: true,
+            warnings: false,
+          },
+          mangle: {
+            screw_ie8: true,
+          },
+          output: {
+            comments: false,
+            screw_ie8: true,
+          },
+        }),
     ]),
   };
 };

@@ -1,12 +1,12 @@
+const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = () => ({
   devtool: 'eval',
-  entry: `${__dirname}/example/index.js`,
+  entry: path.resolve(__dirname, 'src', 'index.js'),
   output: {
     path: '/dist',
-    publicPath: '/',
     filename: '[name].[hash:8].js',
   },
   module: {
@@ -19,7 +19,7 @@ module.exports = () => ({
           {
             loader: 'eslint-loader',
             query: {
-              configFile: '.eslintrc',
+              configFile: path.resolve(__dirname, '..', '.eslintrc'),
               failOnError: false,
               failOnWarning: false,
             },
@@ -42,7 +42,7 @@ module.exports = () => ({
   plugins: [
     new HtmlPlugin({
       inject: true,
-      template: 'example/index.html',
+      template: path.resolve(__dirname, 'src', 'index.html'),
     }),
 
     new ExtractTextPlugin({

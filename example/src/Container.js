@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import InfiniteList from '../src';
+import InfiniteList from 'react-infinite-scroll-list';
 
 export default class Container extends Component {
   constructor(props) {

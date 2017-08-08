@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import InfiniteList from '../src';
+import InfiniteList from 'react-infinite-scroll-list';
 
-export default class ContainerWithViewport extends Component {
+export default class ContainerWithCustomTagName extends Component {
   constructor(props) {
     super(props);
 
@@ -43,20 +43,22 @@ export default class ContainerWithViewport extends Component {
 
     return (
       <div>
-        <p className="Title">Simple infite list on viewport</p>
+        <p className="Title">Simple infite list with custom tag</p>
 
         <InfiniteList
-          className="InfiniteList"
-          root="viewport"
+          className="InfiniteList InfiniteList--with-height"
+          root="container"
           isLoading={isLoading}
           isEndReached={isEndReached}
+          containerTagName="ul"
+          sentinelTagName="li"
           onReachThreshold={this.createElement}
           threshold={150}
         >
           {items.map(item =>
-            <div className="InfiniteList__Item" key={item.id}>
+            <li className="InfiniteList__Item" key={item.id}>
               {item.message}
-            </div>,
+            </li>,
           )}
         </InfiniteList>
       </div>
