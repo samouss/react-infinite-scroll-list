@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "clean": "rm -rf dist lib",
-    "lint": "eslint src example",
+    "lint": "eslint src",
     "build": "npm run clean && npm run build:lib && npm run build:umd && npm run build:umd:min",
     "build:lib": "babel src --out-dir lib --ignore __tests__",
     "build:umd": "webpack src/index.js dist/react-infinite-list.js --config webpack.config.js --progress",
