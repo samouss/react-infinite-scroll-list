@@ -94,7 +94,7 @@ InfiniteList.propTypes = {
 };
 
 InfiniteList.defaultProps = {
-  className: 'infinite-list',
+  className: '-risl-container',
   containerTagName: 'div',
   sentinelTagName: 'div',
   threshold: 0,

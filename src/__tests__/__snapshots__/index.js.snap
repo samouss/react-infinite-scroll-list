@@ -2,7 +2,7 @@
 
 exports[`<InfiniteList /> on Container expect to render 1`] = `
 <div
-  className="infinite-list"
+  className="-risl-container"
   style={
     Object {
       "position": "relative",
@@ -62,7 +62,7 @@ exports[`<InfiniteList /> on Container expect to render with custom className 1`
 
 exports[`<InfiniteList /> on Container expect to render with custom tagName 1`] = `
 <ul
-  className="infinite-list"
+  className="-risl-container"
   style={
     Object {
       "position": "relative",
@@ -92,7 +92,7 @@ exports[`<InfiniteList /> on Container expect to render with custom tagName 1`] 
 
 exports[`<InfiniteList /> on Container expect to render with threshold 1`] = `
 <div
-  className="infinite-list"
+  className="-risl-container"
   style={
     Object {
       "position": "relative",
