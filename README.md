@@ -17,33 +17,30 @@ Import the module in your application:
 import InfiniteList from 'react-infinite-list-scroll'
 
 // From CJS
-var InfiniteList = require('react-infinite-list-scroll');
+const InfiniteList = require('react-infinite-list-scroll').default;
 
 // From global
-var InfiniteList = ReactInfiniteList.default;
+const InfiniteList = ReactInfiniteList.default;
 ```
 
 Then use it juste like that:
 
 ```js
 <InfiniteList
-  className="custom-class-name"
-  containerHeight="648px"
-  containerTagName="div"
+  root="container|viewport"
   isLoading={true|false}
   isEndReached={true|false}
-  isAttachOnWindow={true|false}
   onReachThreshold={() => { console.log('Load more content') }}
-  threshold={150}
+  className="custom-class-name"
+  containerTagName="div"
+  sentinelTagName="div"
+  threshold={0}
 >
-  {items.map(item => (
-    <div
-      className="custom-infinite-list__item"
-      key={item.id}
-    >
-      Item in the list
-    </div>
-  ))}
+  {items.map(item =>
+    <div className="item-custom-class-name" key={item.id}>
+      {item.message}
+    </div>,
+  )}
 </InfiniteList>
 ```
 
@@ -52,7 +49,7 @@ Then use it juste like that:
 Clone the repository then run:
 
 ```
-npm install
+cd example && npm install
 ```
 
 and then:
