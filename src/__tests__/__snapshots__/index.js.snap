@@ -3,11 +3,6 @@
 exports[`<InfiniteList /> on Container expect to render 1`] = `
 <div
   className="-risl-container"
-  style={
-    Object {
-      "position": "relative",
-    }
-  }
 >
   <div>
     Child 1
@@ -20,12 +15,6 @@ exports[`<InfiniteList /> on Container expect to render 1`] = `
   </div>
   <div
     className="-risl-sentinel"
-    style={
-      Object {
-        "marginTop": "-0px",
-        "position": "absolute",
-      }
-    }
   />
 </div>
 `;
@@ -33,11 +22,6 @@ exports[`<InfiniteList /> on Container expect to render 1`] = `
 exports[`<InfiniteList /> on Container expect to render with custom className 1`] = `
 <div
   className="custom-infinite-list"
-  style={
-    Object {
-      "position": "relative",
-    }
-  }
 >
   <div>
     Child 1
@@ -50,12 +34,6 @@ exports[`<InfiniteList /> on Container expect to render with custom className 1`
   </div>
   <div
     className="-risl-sentinel"
-    style={
-      Object {
-        "marginTop": "-0px",
-        "position": "absolute",
-      }
-    }
   />
 </div>
 `;
@@ -63,11 +41,6 @@ exports[`<InfiniteList /> on Container expect to render with custom className 1`
 exports[`<InfiniteList /> on Container expect to render with custom tagName 1`] = `
 <ul
   className="-risl-container"
-  style={
-    Object {
-      "position": "relative",
-    }
-  }
 >
   <div>
     Child 1
@@ -80,12 +53,6 @@ exports[`<InfiniteList /> on Container expect to render with custom tagName 1`] 
   </div>
   <li
     className="-risl-sentinel"
-    style={
-      Object {
-        "marginTop": "-0px",
-        "position": "absolute",
-      }
-    }
   />
 </ul>
 `;
@@ -93,11 +60,6 @@ exports[`<InfiniteList /> on Container expect to render with custom tagName 1`] 
 exports[`<InfiniteList /> on Container expect to render with threshold 1`] = `
 <div
   className="-risl-container"
-  style={
-    Object {
-      "position": "relative",
-    }
-  }
 >
   <div>
     Child 1
@@ -110,12 +72,6 @@ exports[`<InfiniteList /> on Container expect to render with threshold 1`] = `
   </div>
   <div
     className="-risl-sentinel"
-    style={
-      Object {
-        "marginTop": "-150px",
-        "position": "absolute",
-      }
-    }
   />
 </div>
 `;

@@ -81,6 +81,7 @@ describe('<InfiniteList /> on Container', () => {
         global.IntersectionObserver,
       ).toHaveBeenCalledWith(component.instance().onIntersection, {
         root: null,
+        rootMargin: '0px 0px 0px 0px',
       });
     });
 
@@ -104,6 +105,29 @@ describe('<InfiniteList /> on Container', () => {
         global.IntersectionObserver,
       ).toHaveBeenCalledWith(component.instance().onIntersection, {
         root: 'container-element',
+        rootMargin: '0px 0px 0px 0px',
+      });
+    });
+
+    it('expect to create an IntersectionObserver with threshold', () => {
+      const props = {
+        root: 'viewport',
+        threshold: 150,
+      };
+
+      const component = render(props);
+
+      global.IntersectionObserver.mockImplementation(() => ({
+        observe: () => {},
+      }));
+
+      component.instance().componentDidMount();
+
+      expect(
+        global.IntersectionObserver,
+      ).toHaveBeenCalledWith(component.instance().onIntersection, {
+        root: null,
+        rootMargin: '0px 0px 150px 0px',
       });
     });
 

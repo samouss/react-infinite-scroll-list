@@ -13,10 +13,11 @@ class InfiniteList extends Component {
   }
 
   componentDidMount() {
-    const { root } = this.props;
+    const { root, threshold } = this.props;
 
     this.io = new IntersectionObserver(this.onIntersection, {
       root: root === ROOT_CONTAINER_TYPE ? this.root : null,
+      rootMargin: `0px 0px ${threshold}px 0px`,
     });
 
     this.io.observe(this.sentinel);
@@ -46,19 +47,9 @@ class InfiniteList extends Component {
       className,
       containerTagName,
       sentinelTagName,
-      threshold,
     } = this.props;
     const ContainerTagName = containerTagName;
     const SentinelTagName = sentinelTagName;
-
-    const containerStyle = {
-      position: 'relative',
-    };
-
-    const sentinelStyle = {
-      position: 'absolute',
-      marginTop: `-${threshold}px`,
-    };
 
     return (
       <ContainerTagName
@@ -66,7 +57,6 @@ class InfiniteList extends Component {
           this.root = element;
         }}
         className={className}
-        style={containerStyle}
       >
         {children}
         <SentinelTagName
@@ -74,7 +64,6 @@ class InfiniteList extends Component {
             this.sentinel = element;
           }}
           className="-risl-sentinel"
-          style={sentinelStyle}
         />
       </ContainerTagName>
     );
