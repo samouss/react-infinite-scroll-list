@@ -31,7 +31,8 @@ Then use it juste like that:
   isLoading={true|false}
   isEndReached={true|false}
   onReachThreshold={() => { console.log('Load more content') }}
-  className="custom-class-name"
+  containerClassName="custom-container-class-name"
+  sentinelClassName="custom-sentinel-class-name"
   containerTagName="div"
   sentinelTagName="div"
   threshold={0}
