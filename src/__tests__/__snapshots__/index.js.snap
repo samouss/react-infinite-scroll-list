@@ -19,9 +19,9 @@ exports[`<InfiniteList /> on Container expect to render 1`] = `
 </div>
 `;
 
-exports[`<InfiniteList /> on Container expect to render with custom className 1`] = `
+exports[`<InfiniteList /> on Container expect to render with custom containerClassName 1`] = `
 <div
-  className="custom-infinite-list"
+  className="custom-container"
 >
   <div>
     Child 1
@@ -34,6 +34,25 @@ exports[`<InfiniteList /> on Container expect to render with custom className 1`
   </div>
   <div
     className="-risl-sentinel"
+  />
+</div>
+`;
+
+exports[`<InfiniteList /> on Container expect to render with custom sentinelClassName 1`] = `
+<div
+  className="-risl-container"
+>
+  <div>
+    Child 1
+  </div>
+  <div>
+    Child 2
+  </div>
+  <div>
+    Child 3
+  </div>
+  <div
+    className="custom-sentinel"
   />
 </div>
 `;

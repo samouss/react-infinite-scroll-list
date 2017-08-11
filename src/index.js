@@ -44,7 +44,8 @@ class InfiniteList extends Component {
   render() {
     const {
       children,
-      className,
+      containerClassName,
+      sentinelClassName,
       containerTagName,
       sentinelTagName,
     } = this.props;
@@ -56,14 +57,14 @@ class InfiniteList extends Component {
         ref={element => {
           this.root = element;
         }}
-        className={className}
+        className={containerClassName}
       >
         {children}
         <SentinelTagName
           ref={element => {
             this.sentinel = element;
           }}
-          className="-risl-sentinel"
+          className={sentinelClassName}
         />
       </ContainerTagName>
     );
@@ -76,14 +77,16 @@ InfiniteList.propTypes = {
   isEndReached: PropTypes.bool.isRequired,
   onReachThreshold: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
+  containerClassName: PropTypes.string,
+  sentinelClassName: PropTypes.string,
   containerTagName: PropTypes.string,
   sentinelTagName: PropTypes.string,
   threshold: PropTypes.number,
 };
 
 InfiniteList.defaultProps = {
-  className: '-risl-container',
+  containerClassName: '-risl-container',
+  sentinelClassName: '-risl-sentinel',
   containerTagName: 'div',
   sentinelTagName: 'div',
   threshold: 0,

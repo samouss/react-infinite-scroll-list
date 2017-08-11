@@ -32,9 +32,19 @@ describe('<InfiniteList /> on Container', () => {
     expect(component).toMatchSnapshot();
   });
 
-  it('expect to render with custom className', () => {
+  it('expect to render with custom containerClassName', () => {
     const props = {
-      className: 'custom-infinite-list',
+      containerClassName: 'custom-container',
+    };
+
+    const component = render(props);
+
+    expect(component).toMatchSnapshot();
+  });
+
+  it('expect to render with custom sentinelClassName', () => {
+    const props = {
+      sentinelClassName: 'custom-sentinel',
     };
 
     const component = render(props);
