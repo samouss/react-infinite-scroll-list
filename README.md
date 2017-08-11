@@ -38,7 +38,7 @@ Then use it juste like that:
   threshold={0}
 >
   {items.map(item =>
-    <div className="item-custom-class-name" key={item.id}>
+    <div key={item.id}>
       {item.message}
     </div>,
   )}
