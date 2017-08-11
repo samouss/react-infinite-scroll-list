@@ -56,7 +56,7 @@ export default class ContainerWithLoader extends Component {
         <p className="Title">Simple infite list with loader</p>
 
         <InfiniteList
-          className="InfiniteList InfiniteList--with-height"
+          containerClassName="InfiniteList InfiniteList--with-height"
           root="container"
           isLoading={isLoading}
           isEndReached={isEndReached}

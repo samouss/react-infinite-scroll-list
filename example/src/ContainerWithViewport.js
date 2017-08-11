@@ -46,12 +46,12 @@ export default class ContainerWithViewport extends Component {
         <p className="Title">Simple infite list on viewport</p>
 
         <InfiniteList
-          className="InfiniteList"
+          containerClassName="InfiniteList"
           root="viewport"
           isLoading={isLoading}
           isEndReached={isEndReached}
           onReachThreshold={this.createElement}
-          threshold={150}
+          threshold={300}
         >
           {items.map(item =>
             <div className="InfiniteList__Item" key={item.id}>

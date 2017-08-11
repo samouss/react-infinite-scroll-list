@@ -46,7 +46,7 @@ export default class ContainerWithCustomTagName extends Component {
         <p className="Title">Simple infite list with custom tag</p>
 
         <InfiniteList
-          className="InfiniteList InfiniteList--with-height"
+          containerClassName="InfiniteList InfiniteList--with-height"
           root="container"
           isLoading={isLoading}
           isEndReached={isEndReached}
