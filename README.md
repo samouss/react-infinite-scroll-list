@@ -45,22 +45,12 @@ Then use it juste like that:
 </InfiniteList>
 ```
 
-## Run the example
-
-Clone the repository then run:
-
-```
-cd example && npm install
-```
-
-and then:
-
-```
-npm start
-```
-
 ## Run the test
 
 ```
 npm test
 ```
+
+## Example
+
+Check out the [documentation](example/README.md).
