@@ -53,4 +53,4 @@ npm test
 
 ## Example
 
-Check out the [documentation](example/README.md).
+Check out the [documentation](example).
