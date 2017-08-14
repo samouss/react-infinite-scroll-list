@@ -1,6 +1,6 @@
 {
   "name": "react-infinite-scroll-list",
-  "version": "3.0.0-0",
+  "version": "3.0.0-beta.1",
   "description": "React component for create an inifinte list",
   "main": "dist/react-infinite-scroll-list.umd.js",
   "module": "dist/react-infinite-scroll-list.es5.js",
