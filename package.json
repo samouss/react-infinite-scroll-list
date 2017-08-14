@@ -7,9 +7,9 @@
   "es2015": "src/index.js",
   "scripts": {
     "clean": "rm -rf dist",
-    "lint": "eslint src",
     "dev": "npm run clean && npm run rollup -- --watch",
-    "build": "npm run clean && npm run rollup",
+    "build": "npm run clean && npm run lint && npm run rollup",
+    "lint": "eslint src",
     "rollup": "rollup --config",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
