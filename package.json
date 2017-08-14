@@ -21,7 +21,6 @@
   },
   "files": [
     "dist",
-    "lib",
     "src"
   ],
   "keywords": [
@@ -35,9 +34,6 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "6.24.1",
-    "babel-core": "6.25.0",
-    "babel-loader": "7.1.1",
     "babel-plugin-external-helpers": "6.22.0",
     "babel-plugin-transform-es2015-modules-commonjs": "6.24.1",
     "babel-plugin-transform-object-rest-spread": "6.23.0",
@@ -48,7 +44,6 @@
     "eslint": "4.4.1",
     "eslint-config-airbnb": "15.1.0",
     "eslint-config-prettier": "2.3.0",
-    "eslint-loader": "1.9.0",
     "eslint-plugin-import": "2.7.0",
     "eslint-plugin-jsx-a11y": "5.1.1",
     "eslint-plugin-prettier": "2.1.2",
@@ -63,8 +58,7 @@
     "rollup-plugin-babel": "3.0.1",
     "rollup-plugin-commonjs": "8.1.0",
     "rollup-plugin-node-resolve": "3.0.0",
-    "rollup-plugin-uglify": "2.0.1",
-    "webpack": "3.5.2"
+    "rollup-plugin-uglify": "2.0.1"
   },
   "dependencies": {
     "intersection-observer": "0.4.0"
