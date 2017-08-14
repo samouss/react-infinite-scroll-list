@@ -8,7 +8,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "dev": "npm run clean && npm run rollup -- --watch",
-    "build": "npm run clean && npm run lint && npm run rollup",
+    "build": "npm run clean && npm run rollup",
     "lint": "eslint src",
     "rollup": "rollup --config",
     "test": "jest",
