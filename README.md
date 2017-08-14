@@ -20,7 +20,7 @@ import InfiniteList from 'react-infinite-list-scroll'
 const InfiniteList = require('react-infinite-list-scroll').default;
 
 // From global
-const InfiniteList = ReactInfiniteList.default;
+const InfiniteList = ReactInfiniteScrollList.default;
 ```
 
 Then use it juste like that:
