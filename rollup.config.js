@@ -3,6 +3,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 import uglify from 'rollup-plugin-uglify';
+import filesize from 'rollup-plugin-filesize';
 import pkg from './package.json';
 
 const filter = arr => arr.filter(x => !!x);
@@ -12,14 +13,15 @@ const isProduction = !argv.includes('--watch') && !argv.includes('-w');
 const main = pkg.main;
 const extname = path.extname(pkg.main);
 
-const defaultPlugins = [
+const defaultPlugins = filter([
   resolve(),
   commonjs(),
   babel({
     exclude: 'node_modules/**',
     plugins: ['external-helpers'],
   }),
-];
+  isProduction && filesize(),
+]);
 
 const configuration = ({ format, dest, plugins = defaultPlugins } = {}) => ({
   entry: 'src/index.js',
