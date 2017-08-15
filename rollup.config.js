@@ -1,3 +1,4 @@
+import path from 'path';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
@@ -7,6 +8,9 @@ import pkg from './package.json';
 const filter = arr => arr.filter(x => !!x);
 const argv = process.argv.slice(2);
 const isProduction = !argv.includes('--watch') && !argv.includes('-w');
+
+const main = pkg.main;
+const extname = path.extname(pkg.main);
 
 const defaultPlugins = [
   resolve(),
@@ -32,11 +36,11 @@ const configuration = ({ format, dest, plugins = defaultPlugins } = {}) => ({
 
 export default filter([
   configuration({ format: 'es', dest: pkg.module }),
-  isProduction && configuration({ format: 'umd', dest: pkg.main }),
+  isProduction && configuration({ format: 'umd', dest: main }),
   isProduction &&
     configuration({
       format: 'umd',
-      dest: `${pkg.main.substring(0, pkg.main.length - 3)}.min.js`,
+      dest: `${main.substring(0, main.length - extname.length)}.min${extname}`,
       plugins: defaultPlugins.concat([
         uglify({
           compress: {
