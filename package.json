@@ -60,9 +60,6 @@
     "rollup-plugin-node-resolve": "3.0.0",
     "rollup-plugin-uglify": "2.0.1"
   },
-  "dependencies": {
-    "intersection-observer": "0.4.0"
-  },
   "peerDependencies": {
     "react": "^15.0.0",
     "prop-types": "^15.0.0"
