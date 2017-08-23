@@ -1,3 +1,6 @@
+/* eslint-disable import/extensions */
+/* eslint import/no-unresolved: [2, { ignore: ['react-infinite-scroll-list'] }] */
+
 import React, { Component } from 'react';
 import InfiniteList from 'react-infinite-scroll-list';
 
