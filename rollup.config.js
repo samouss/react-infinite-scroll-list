@@ -24,15 +24,17 @@ const defaultPlugins = filter([
 ]);
 
 const configuration = ({ format, dest, plugins = defaultPlugins } = {}) => ({
-  entry: 'src/index.js',
-  moduleName: 'ReactInfiniteScrollList',
+  input: 'src/index.js',
+  output: {
+    file: dest,
+    name: 'ReactInfiniteScrollList',
+    format,
+  },
   external: ['react', 'prop-types'],
   globals: {
     react: 'React',
     'prop-types': 'PropTypes',
   },
-  format,
-  dest,
   plugins,
 });
 
