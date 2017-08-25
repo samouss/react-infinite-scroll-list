@@ -24,10 +24,12 @@
     "src"
   ],
   "keywords": [
+    "react",
+    "component",
     "infinite",
     "scroll",
     "list",
-    "react"
+    "intersection-observer"
   ],
   "author": [
     "Samuel Vaillant <samuel.vllnt@gmail.com>"
