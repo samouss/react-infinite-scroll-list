@@ -5,7 +5,7 @@
 ## Installation
 
 ```
-npm install --save react-infinite-scroll-list
+yarn add react-infinite-scroll-list
 ```
 
 **Note:** This library is based on the [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) API, it's not yet widely supported.  
@@ -51,7 +51,7 @@ Then use it juste like that:
 ## Run the test
 
 ```
-npm test
+yarn test
 ```
 
 ## Example

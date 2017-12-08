@@ -1,11 +1,11 @@
 # Example
 
 ```
-npm install
+yarn install
 ```
 
 and then:
 
 ```
-npm start
+yarn start
 ```

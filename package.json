@@ -7,13 +7,13 @@
   "es2015": "src/index.js",
   "scripts": {
     "clean": "rm -rf dist",
-    "dev": "npm run clean && npm run rollup -- --watch",
-    "build": "npm run clean && npm run rollup",
+    "start": "yarn clean && yarn rollup --watch",
+    "build": "yarn clean && yarn rollup",
     "lint": "eslint src",
     "rollup": "rollup --config",
     "test": "jest",
-    "test:watch": "npm run test -- --watch",
-    "prepublishOnly": "npm run lint && npm run build"
+    "test:watch": "yarn test --watch",
+    "prepublishOnly": "yarn lint && yarn build"
   },
   "repository": {
     "type": "git",
