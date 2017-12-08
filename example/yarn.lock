@@ -4251,9 +4251,9 @@ react-dom@15.6.1:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
-react-infinite-scroll-list@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-infinite-scroll-list/-/react-infinite-scroll-list-2.0.0.tgz#1badd99cd41fee9ea48755ff94bcb39a92824903"
+react-infinite-scroll-list@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-infinite-scroll-list/-/react-infinite-scroll-list-3.0.0.tgz#355cb0aaebe76bc6c0d376956fa6252ca9a82b9f"
 
 react@15.6.1:
   version "15.6.1"
