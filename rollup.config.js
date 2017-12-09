@@ -9,7 +9,7 @@ const filter = arr => arr.filter(x => !!x);
 const argv = process.argv.slice(2);
 const isProduction = !argv.includes('--watch') && !argv.includes('-w');
 
-const main = pkg.main;
+const { main } = pkg;
 const extname = path.extname(pkg.main);
 
 const defaultPlugins = filter([
