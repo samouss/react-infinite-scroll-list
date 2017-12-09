@@ -11,7 +11,7 @@ before_install:
 
 install:
   - yarn
-  - cd example && yarn
+  - (cd example && yarn)
 
 script:
   - yarn lint
