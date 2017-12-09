@@ -17,7 +17,7 @@ Import the module in your application:
 
 ```js
 // From ES6
-import InfiniteList from 'react-infinite-list-scroll'
+import InfiniteList from 'react-infinite-list-scroll';
 
 // From CJS
 const InfiniteList = require('react-infinite-list-scroll').default;
@@ -31,20 +31,18 @@ Then use it juste like that:
 ```js
 <InfiniteList
   root="container|viewport"
-  isLoading={true|false}
-  isEndReached={true|false}
-  onReachThreshold={() => { console.log('Load more content') }}
+  isLoading={true | false}
+  isEndReached={true | false}
+  onReachThreshold={() => {
+    console.log('Load more content');
+  }}
   containerClassName="custom-container-class-name"
   sentinelClassName="custom-sentinel-class-name"
   containerTagName="div"
   sentinelTagName="div"
   threshold={0}
 >
-  {items.map(item =>
-    <div key={item.id}>
-      {item.message}
-    </div>,
-  )}
+  {items.map(item => <div key={item.id}>{item.message}</div>)}
 </InfiniteList>
 ```
 

@@ -56,11 +56,11 @@ export default class ContainerWithViewport extends Component {
           onReachThreshold={this.createElement}
           threshold={300}
         >
-          {items.map(item =>
+          {items.map(item => (
             <div className="InfiniteList__Item" key={item.id}>
               {item.message}
-            </div>,
-          )}
+            </div>
+          ))}
         </InfiniteList>
       </div>
     );

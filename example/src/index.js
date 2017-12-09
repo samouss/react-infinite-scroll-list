@@ -7,12 +7,13 @@ import ContainerWithCustomTagName from './ContainerWithCustomTagName';
 import ContainerWithViewport from './ContainerWithViewport';
 import './index.css';
 
-const App = () =>
+const App = () => (
   <div>
     <Container />
     <ContainerWithLoader />
     <ContainerWithCustomTagName />
     <ContainerWithViewport />
-  </div>;
+  </div>
+);
 
 render(<App />, document.getElementById('root'));

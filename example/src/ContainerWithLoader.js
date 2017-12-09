@@ -66,11 +66,11 @@ export default class ContainerWithLoader extends Component {
           onReachThreshold={this.createElement}
           threshold={150}
         >
-          {items.map(item =>
+          {items.map(item => (
             <div className="InfiniteList__Item" key={item.id}>
               {item.message}
-            </div>,
-          )}
+            </div>
+          ))}
           {this.renderFooter()}
         </InfiniteList>
       </div>
