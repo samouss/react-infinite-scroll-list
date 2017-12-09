@@ -5,12 +5,6 @@ const ROOT_VIEWPORT_TYPE = 'viewport';
 const ROOT_CONTAINER_TYPE = 'container';
 
 class InfiniteList extends Component {
-  constructor(props) {
-    super(props);
-
-    this.onIntersection = this.onIntersection.bind(this);
-  }
-
   componentDidMount() {
     const { root, threshold } = this.props;
 
@@ -26,7 +20,7 @@ class InfiniteList extends Component {
     this.io.disconnect();
   }
 
-  onIntersection(entries) {
+  onIntersection = entries => {
     const { isLoading, isEndReached, onReachThreshold } = this.props;
 
     if (isLoading || isEndReached) {
@@ -38,7 +32,7 @@ class InfiniteList extends Component {
         onReachThreshold(entry);
       }
     });
-  }
+  };
 
   render() {
     const {
