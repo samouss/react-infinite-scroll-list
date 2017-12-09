@@ -9,7 +9,7 @@
     "clean": "rm -rf dist",
     "start": "yarn clean && yarn rollup --watch",
     "build": "yarn clean && yarn rollup",
-    "lint": "eslint src",
+    "lint": "eslint .",
     "rollup": "rollup --config",
     "test": "jest",
     "test:watch": "yarn test --watch",
