@@ -39,6 +39,6 @@
     "prop-types": "15.6.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
-    "react-infinite-scroll-list": "3.0.0"
+    "react-infinite-scroll-list": "4.0.0"
   }
 }
