@@ -1,8 +1,9 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import InfiniteList from '../index';
 
-global.IntersectionObserver = jest.fn();
+Enzyme.configure({ adapter: new Adapter() });
 
 describe('<InfiniteList /> on Container', () => {
   const render = props => {
@@ -23,7 +24,9 @@ describe('<InfiniteList /> on Container', () => {
   };
 
   beforeEach(() => {
-    global.IntersectionObserver.mockReset();
+    global.IntersectionObserver = jest.fn(() => ({
+      observe: jest.fn(),
+    }));
   });
 
   it('expect to render', () => {
