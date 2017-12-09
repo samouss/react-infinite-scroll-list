@@ -1,15 +1,10 @@
 {
+  "parser": "babel-eslint",
   "extends": [
     "airbnb",
     "prettier",
     "prettier/react",
   ],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
-      "jsx": true,
-    },
-  },
   "plugins": [
     "react",
     "jsx-a11y",
