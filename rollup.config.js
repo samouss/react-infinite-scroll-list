@@ -13,11 +13,11 @@ const { main } = pkg;
 const extname = path.extname(pkg.main);
 
 const defaultPlugins = filter([
-  commonjs(),
   babel({
     exclude: 'node_modules/**',
     plugins: ['external-helpers'],
   }),
+  commonjs(),
   isProduction && filesize(),
 ]);
 
