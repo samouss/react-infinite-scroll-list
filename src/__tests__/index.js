@@ -87,12 +87,13 @@ describe('<InfiniteList /> on Container', () => {
 
       component.instance().componentDidMount();
 
-      expect(
-        global.IntersectionObserver,
-      ).toHaveBeenCalledWith(component.instance().onIntersection, {
-        root: null,
-        rootMargin: '0px 0px 0px 0px',
-      });
+      expect(global.IntersectionObserver).toHaveBeenCalledWith(
+        component.instance().onIntersection,
+        {
+          root: null,
+          rootMargin: '0px 0px 0px 0px',
+        },
+      );
     });
 
     it('expect to create an IntersectionObserver on container', () => {
@@ -111,12 +112,13 @@ describe('<InfiniteList /> on Container', () => {
 
       component.instance().componentDidMount();
 
-      expect(
-        global.IntersectionObserver,
-      ).toHaveBeenCalledWith(component.instance().onIntersection, {
-        root: 'container-element',
-        rootMargin: '0px 0px 0px 0px',
-      });
+      expect(global.IntersectionObserver).toHaveBeenCalledWith(
+        component.instance().onIntersection,
+        {
+          root: 'container-element',
+          rootMargin: '0px 0px 0px 0px',
+        },
+      );
     });
 
     it('expect to create an IntersectionObserver with threshold', () => {
@@ -133,12 +135,13 @@ describe('<InfiniteList /> on Container', () => {
 
       component.instance().componentDidMount();
 
-      expect(
-        global.IntersectionObserver,
-      ).toHaveBeenCalledWith(component.instance().onIntersection, {
-        root: null,
-        rootMargin: '0px 0px 150px 0px',
-      });
+      expect(global.IntersectionObserver).toHaveBeenCalledWith(
+        component.instance().onIntersection,
+        {
+          root: null,
+          rootMargin: '0px 0px 150px 0px',
+        },
+      );
     });
 
     it('expect to observe the sentinel from IntersectionObserver', () => {
