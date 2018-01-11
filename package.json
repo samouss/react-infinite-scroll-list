@@ -55,7 +55,7 @@
     "eslint-plugin-prettier": "2.4.0",
     "eslint-plugin-react": "7.4.0",
     "jest": "22.0.5",
-    "prettier": "1.10.1",
+    "prettier": "1.10.2",
     "prop-types": "15.6.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
