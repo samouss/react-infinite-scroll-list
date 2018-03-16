@@ -17,10 +17,10 @@ Import the module in your application:
 
 ```js
 // From ES6
-import InfiniteList from 'react-infinite-list-scroll';
+import InfiniteList from 'react-infinite-scroll-list';
 
 // From CJS
-const InfiniteList = require('react-infinite-list-scroll').default;
+const InfiniteList = require('react-infinite-scroll-list').default;
 
 // From global
 const InfiniteList = ReactInfiniteScrollList.default;
