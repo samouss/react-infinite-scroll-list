@@ -37,8 +37,8 @@
   "dependencies": {
     "intersection-observer": "0.5.0",
     "prop-types": "15.6.1",
-    "react": "16.3.2",
-    "react-dom": "16.3.2",
+    "react": "16.4.0",
+    "react-dom": "16.4.0",
     "react-infinite-scroll-list": "4.0.0"
   }
 }
