@@ -14,8 +14,9 @@
     "test": "jest",
     "test:watch": "yarn test --watch",
     "prepublishOnly": "yarn lint && yarn build",
-    "storybook:start": "start-storybook --port 8080 --static-dir public",
-    "storybook:build": "build-storybook --static-dir public --output-dir docs"
+    "start-storybook": "start-storybook --port 8080 --static-dir public",
+    "build-storybook": "build-storybook --static-dir public",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
     "@storybook/addons": "3.4.7",
     "@storybook/cli": "3.4.7",
     "@storybook/react": "3.4.7",
+    "@storybook/storybook-deployer": "2.3.0",
     "babel-core": "6.26.3",
     "babel-eslint": "8.2.3",
     "babel-plugin-external-helpers": "6.22.0",
