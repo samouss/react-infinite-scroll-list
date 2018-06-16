@@ -1,0 +1,41 @@
+/**
+ * Index.css
+ */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
+    Helvetica, Arial, 'Lucida Grande', sans-serif;
+  background-color: #ffffff;
+}
+
+.Title {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.InfiniteList {
+  width: 450px;
+  overflow-y: scroll;
+  margin: 5vh auto;
+  list-style: none;
+  padding: 0;
+  background-color: #ffffff;
+  border: 5px solid #e6e6e6;
+  box-sizing: border-box;
+}
+
+.InfiniteList--with-height {
+  height: 90vh;
+}
+
+.InfiniteList__Item {
+  display: flex;
+  padding: 15px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #e6e6e6;
+}

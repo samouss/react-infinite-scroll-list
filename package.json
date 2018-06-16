@@ -14,8 +14,8 @@
     "test": "jest",
     "test:watch": "yarn test --watch",
     "prepublishOnly": "yarn lint && yarn build",
-    "storybook:start": "start-storybook -p 8080",
-    "storybook:build": "build-storybook"
+    "storybook:start": "start-storybook --port 8080 --static-dir public",
+    "storybook:build": "build-storybook --static-dir public --output-dir docs"
   },
   "repository": {
     "type": "git",
