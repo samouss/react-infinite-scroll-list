@@ -11,7 +11,7 @@ yarn add react-infinite-scroll-list
 **Note:** This library is based on the [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) API, it's not yet widely supported.
 Check the [compatibility table](http://caniuse.com/#feat=intersectionobserver) and add a [Polyfill](https://github.com/w3c/IntersectionObserver/tree/gh-pages/polyfill) to your needs!
 
-> Check out the example on [Storybook](https://samouss.github.io/react-infinite-list/)
+> Check out the example on [Storybook](http://samouss.github.io/react-infinite-scroll-list)
 
 ## Usage
 
