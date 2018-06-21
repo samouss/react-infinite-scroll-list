@@ -150,11 +150,11 @@
   version "3.4.7"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-3.4.7.tgz#b1cc7650d01e677bd02799216b6c1a0f3b903969"
 
-"@storybook/cli@3.4.7":
-  version "3.4.7"
-  resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-3.4.7.tgz#f73a7a2a18b324603b531c34a73239e961c9dbd5"
+"@storybook/cli@3.4.8":
+  version "3.4.8"
+  resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-3.4.8.tgz#1e02c8291b89514705247b7a9ebbec874423affd"
   dependencies:
-    "@storybook/codemod" "3.4.7"
+    "@storybook/codemod" "3.4.8"
     babel-plugin-transform-runtime "^6.23.0"
     babel-preset-env "^1.6.0"
     babel-register "^6.26.0"
@@ -174,9 +174,9 @@
   version "3.4.7"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-3.4.7.tgz#577a3dae3f46d95e3dcc1cdb6e8726d5d6324619"
 
-"@storybook/codemod@3.4.7":
-  version "3.4.7"
-  resolved "https://registry.yarnpkg.com/@storybook/codemod/-/codemod-3.4.7.tgz#8a3be8ab76aa3f717343d7dee2b5f4dc1f5d5bbe"
+"@storybook/codemod@3.4.8":
+  version "3.4.8"
+  resolved "https://registry.yarnpkg.com/@storybook/codemod/-/codemod-3.4.8.tgz#6809f5b12ee262049231dc8cc9aed38125929870"
   dependencies:
     jscodeshift "^0.5.0"
 

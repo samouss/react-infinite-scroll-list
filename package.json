@@ -42,7 +42,7 @@
   "devDependencies": {
     "@storybook/addon-options": "3.4.7",
     "@storybook/addons": "3.4.7",
-    "@storybook/cli": "3.4.7",
+    "@storybook/cli": "3.4.8",
     "@storybook/react": "3.4.7",
     "@storybook/storybook-deployer": "2.3.0",
     "babel-core": "6.26.3",
