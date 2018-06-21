@@ -40,7 +40,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@storybook/addon-options": "3.4.7",
+    "@storybook/addon-options": "3.4.8",
     "@storybook/addons": "3.4.7",
     "@storybook/cli": "3.4.8",
     "@storybook/react": "3.4.7",
