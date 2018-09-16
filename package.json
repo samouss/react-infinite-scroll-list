@@ -74,7 +74,7 @@
     "rollup-plugin-babel": "3.0.7",
     "rollup-plugin-commonjs": "9.1.6",
     "rollup-plugin-filesize": "4.0.1",
-    "rollup-plugin-uglify": "5.0.2"
+    "rollup-plugin-uglify": "6.0.0"
   },
   "peerDependencies": {
     "prop-types": "^15.0.0",
