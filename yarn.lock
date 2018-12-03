@@ -328,10 +328,10 @@
     webpack "^3.11.0"
     webpack-hot-middleware "^2.22.1"
 
-"@storybook/storybook-deployer@2.5.0":
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/@storybook/storybook-deployer/-/storybook-deployer-2.5.0.tgz#a9a6eebf31d36437b238dc471aa994568393ef36"
-  integrity sha512-NfgEpmvjsJS6OkdAttEoiIQW/fDNoffqimaQpLeWy6czXhNefkUYrXrJZjBYyrKJRBQWr5aIKYcdHopXRQvW0A==
+"@storybook/storybook-deployer@2.5.2":
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/@storybook/storybook-deployer/-/storybook-deployer-2.5.2.tgz#3670f0c407fc135907656503fdb4f3fa1e8fffb1"
+  integrity sha512-MJVx8PiRvAFDL4jSOvtPwc+YtYgyBI+QY1LCPJS0uJx6125Qwmq1WBXYH5UDNSt7+NIGiI+Dc2kgAfouIcBxsw==
   dependencies:
     git-url-parse "^8.1.0"
     glob "^7.1.3"
