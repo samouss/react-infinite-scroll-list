@@ -41,7 +41,7 @@
   "license": "MIT",
   "devDependencies": {
     "@storybook/addon-options": "3.4.11",
-    "@storybook/addons": "3.4.11",
+    "@storybook/addons": "5.1.9",
     "@storybook/cli": "3.4.11",
     "@storybook/react": "3.4.11",
     "@storybook/storybook-deployer": "2.8.1",
